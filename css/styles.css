@@ -14,13 +14,105 @@ html {
   box-sizing: inherit;
 }
 
-body {background-color: #000;}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+.frame-curtain {
+    position: relative;
+    background-image: url(/images/frame-curtain.png);
+    height: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 999999999999;
+}
+
+
+.bike {
+    position: absolute;
+    bottom: -50px;
+    z-index: 999997;
+    transform: scaleX(-1);
+    animation: ridearound ease 9s forwards;
+}
+
+.center-curtains-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 102vh;
+    z-index: 99995;
+    animation: moveleft ease 5s forwards;
+    animation-delay: 5s;
+}
+
+
+.center-curtains-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 102vh;
+    z-index: 99995;
+    animation: moveright ease 5s forwards;
+    animation-delay: 5s;
+}
+
+
+@keyframes ridearound {
+    0% {
+        right: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        right: -100%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes moveleft {
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        left: -100%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes moveright {
+    0% {
+        right: 0;
+        opacity: 1;
+    }
+
+    100% {
+        right: -100%;
+        opacity: 1;
+    }
+}
 
 
 #myVideo {
-  width: 100%; 
-  height: 100%;
-  opacity: .7;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  object-fit: cover;
+  filter:brightness(.7);
+  filter: grayscale(.85);
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 
@@ -28,7 +120,7 @@ h1 {
     position: absolute;
     font-family: sans-serif;
     text-transform: uppercase;
-    letter-spacing: .8em;
+    letter-spacing: .3em;
     line-height: 3em;
     color: #fff;
     z-index: 999;
