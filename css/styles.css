@@ -8,6 +8,7 @@ text-align: center;
 /* CHANGES DOC TO BOX MODEL */
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -24,8 +25,8 @@ body {
 .frame-curtain {
  position: absolute;
     top: 0;
-    left: -12px;
-    width: 100vw;
+    left: -28px;
+    width: 103vw;
     height: 104vh;
     z-index: 999999999999;
 }
@@ -43,9 +44,22 @@ body {
     top: 30%;
     left: 50%;
     transform: translateX(-50%);
+    width: 410px;
     z-index: 99995;
-
 }
+
+
+
+#myVideo {
+    position: absolute;
+    top: 34.3%;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 330px;
+    height: 
+}
+
+
 
 .bike {
     position: absolute;
@@ -86,7 +100,7 @@ body {
     }
 
     100% {
-        right: -100%;
+        right: -130%;
         opacity: 1;
     }
 }
@@ -118,41 +132,45 @@ body {
 }
 
 
-#myVideo {
+.monkey-1 {
     position: absolute;
-    top: 34.3%;
-    left: 49%;
-    transform: translateX(-50%);
-    width: 330px;
-    height: 
+    left: -30px;
+    top: 55vh;
+    opacity: 0;
+    transform: rotate(35deg);
+    animation: curtainmonkey ease 2s forwards;
+    animation-delay: 7.5s;
 }
 
 
+@keyframes curtainmonkey {
+    0% {
+        left: -100px;
+        top: 57vh;
+        opacity: 1;
+    }
+    
+    50% {
+        left: -80px;
+        top: 57vh;
+        opacity: 1;
+    }
 
-
-/*
-#myVideo {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100vw;
-  object-fit: cover;
-  filter:brightness(.7);
-  filter: grayscale(.85);
-  top: 0;
-  left: 0;
-  z-index: -1;
+    100% {
+        right: -35px;
+        top: 55vh;
+        opacity: 1;
+    }
 }
-*/
 
 
 h1 {
     font-family: 'Shrikhand', cursive;
     position: absolute;
-    font-size: 5.3vw;
+    font-size: 5.1vw;
     color: #514339;
     mix-blend-mode: screen;
-    opacity: .6;
+    opacity: .7;
     z-index: 999;
     top: 20%;
     left: 50%;
