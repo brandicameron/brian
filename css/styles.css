@@ -24,12 +24,28 @@ body {
 .frame-curtain {
  position: absolute;
     top: 0;
-    left: 0;
+    left: -12px;
     width: 100vw;
     height: 104vh;
     z-index: 999999999999;
 }
 
+
+.brick {
+    background-image: url(/images/brick.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: repeat;
+}
+
+.frame {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99995;
+
+}
 
 .bike {
     position: absolute;
@@ -103,6 +119,19 @@ body {
 
 
 #myVideo {
+    position: absolute;
+    top: 34.3%;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 330px;
+    height: 
+}
+
+
+
+
+/*
+#myVideo {
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -114,17 +143,18 @@ body {
   left: 0;
   z-index: -1;
 }
+*/
 
 
 h1 {
+    font-family: 'Shrikhand', cursive;
     position: absolute;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .3em;
-    line-height: 3em;
-    color: #fff;
+    font-size: 5.3vw;
+    color: #514339;
+    mix-blend-mode: screen;
+    opacity: .6;
     z-index: 999;
-    top: 45%;
+    top: 20%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
