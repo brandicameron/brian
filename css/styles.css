@@ -22,11 +22,11 @@ body {
 
 
 .frame-curtain {
-    position: relative;
-    background-image: url(/images/frame-curtain.png);
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
+ position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 104vh;
     z-index: 999999999999;
 }
 
@@ -109,7 +109,7 @@ body {
   width: 100vw;
   object-fit: cover;
   filter:brightness(.7);
-  filter: grayscale(.75);
+  filter: grayscale(.85);
   top: 0;
   left: 0;
   z-index: -1;
@@ -120,75 +120,12 @@ h1 {
     position: absolute;
     font-family: sans-serif;
     text-transform: uppercase;
-    letter-spacing: .25em;
+    letter-spacing: .3em;
     line-height: 3em;
     color: #fff;
     z-index: 999;
-    text-align: center;
-    top:43%;
-    left: 35%;
-    font-size: 2em;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
-
-
-/*----------------MEDIA----------------*/
-
-
-@media screen and (max-width: 500px) {
-
-
-
-    
-
- h1 {
-    position: absolute;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .25em;
-    line-height: 3em;
-    color: #fff;
-    z-index: 999;
-    text-align: center;
-    top: 15%;
-    left: 20%;
-    font-size: 1em;
-}
-    
-    
-    
-    
-    
-    .bike {
-    position: absolute;
-    bottom: -50px;
-    z-index: 999997;
-    transform: scaleX(-1);
-    animation: ridearound ease 9s forwards;
-}
-    
-    
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
