@@ -55,7 +55,7 @@ body {
 
 
 .brick {
-    background-image: url(../images/brick-l.jpg);
+    background-image: radial-gradient(ellipse at center,  rgb(0, 0, 0, 0.0) 0%, rgb(0, 0, 0, 0.0) 30%, #190d0d 68%), url(../images/brick-l.jpg);
     width: 100vw;
     height: 100vh;
     background-repeat: repeat;
