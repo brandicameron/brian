@@ -33,18 +33,21 @@ body {
 
 
 .brick {
-    background-image: url(/images/brick.jpg);
+    background-image: url(/images/brick-l.jpg);
     width: 100vw;
     height: 100vh;
     background-repeat: repeat;
 }
 
+
+
 .frame {
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 50%;
     transform: translateX(-50%);
-    width: 410px;
+    width: 300px;
+    height: 400px;
     z-index: 99995;
 }
 
@@ -52,18 +55,18 @@ body {
 
 #myVideo {
     position: absolute;
-    top: 34.3%;
-    left: 49%;
+    top: 28%;
+    left: 50%;
     transform: translateX(-50%);
-    width: 330px;
-    height: 
+    width: 287px;
+    height: 400px;
 }
 
 
 
 .bike {
     position: absolute;
-    bottom: -50px;
+    bottom: 0px;
     z-index: 999997;
     transform: scaleX(-1);
     animation: ridearound ease 9s forwards;
@@ -100,7 +103,7 @@ body {
     }
 
     100% {
-        right: -130%;
+        right: -150%;
         opacity: 1;
     }
 }
@@ -131,6 +134,14 @@ body {
     }
 }
 
+
+.floor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 99999;
+}
 
 .monkey-1 {
     position: absolute;
@@ -172,8 +183,35 @@ h1 {
     mix-blend-mode: screen;
     opacity: .7;
     z-index: 999;
-    top: 20%;
+    top: 17%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+}
+
+
+
+
+
+@media screen and (max-width: 650px) {
+    
+    
+    .frame-curtain {
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 103vw;
+    height: 104vh;
+    z-index: 999999999999;
+}
+    
+    
+    
+    .monkey-1 {
+        display: none;
+    }
+    
+    
+    
+    
 }
