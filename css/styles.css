@@ -155,7 +155,7 @@ body {
     top: 0;
     left: 0;
     width: 50vw;
-    height: 102vh;
+    height: 91vh;
     z-index: 99995;
     animation: moveleft ease 5s forwards;
     animation-delay: 4s;
@@ -167,7 +167,7 @@ body {
     top: 0;
     right: 0;
     width: 50vw;
-    height: 102vh;
+    height: 91vh;
     z-index: 99995;
     animation: moveright ease 5s forwards;
     animation-delay: 4s;
@@ -225,7 +225,7 @@ body {
     background-repeat: repeat-x;
     bottom: -50px;
     left: 0;
-    z-index: 99999;
+    z-index: 99994;
 }
 
 .monkey-1 {
@@ -255,6 +255,7 @@ body {
 }
 
 
+/*
 h1 {
     font-family: 'Shrikhand', cursive;
     position: absolute;
@@ -268,8 +269,21 @@ h1 {
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
+*/
 
-
+.title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 135px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    max-width: 50vw;
+    -webkit-filter: drop-shadow(2px 2px 1px rgb(0, 0, 0, .3));
+    filter: drop-shadow(2px 2px 1px rgb(0, 0, 0, .3));
+    z-index: 9;
+}
 
 
 
