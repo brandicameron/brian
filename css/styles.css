@@ -61,14 +61,72 @@ body {
 }
 
 
-
-.bike {
-    position: absolute;
+.ride {
+     position: absolute;
     bottom: 0px;
     z-index: 999997;
-    transform: scaleX(-1);
+/*    transform: scaleX(-1);*/
     animation: ridearound ease 9s forwards;
 }
+
+.head {
+    position: absolute;
+    bottom: 302px;
+    left: 28%;
+    animation: head ease 3s infinite;
+}
+
+.arm {
+    position: absolute;
+    bottom: 300px;
+    left: 49%;
+    animation: wave ease 1s infinite;
+    transform: rotate(-5deg);
+    transform-origin: 0px 100px;
+    z-index: -1;
+
+}
+
+
+@keyframes head {
+    0% {
+        right: 100%;
+        transform: rotate();
+        opacity: 1;
+    }
+    
+      50% {
+        right: 100%;
+        transform: rotate(12deg);
+        opacity: 1;
+    }
+
+    100% {
+        right: -150%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes wave {
+    0% {
+        right: 100%;
+        transform: rotate();
+        opacity: 1;
+    }
+    
+      50% {
+        right: 100%;
+        transform: rotate(7deg);
+        opacity: 1;
+    }
+
+    100% {
+        right: -150%;
+        opacity: 1;
+    }
+}
+
 
 .center-curtains-left {
     position: absolute;
@@ -92,6 +150,7 @@ body {
     animation: moveright ease 5s forwards;
     animation-delay: 3s;
 }
+
 
 
 @keyframes ridearound {
@@ -131,6 +190,9 @@ body {
         opacity: 1;
     }
 }
+
+
+
 
 
 .floor {
