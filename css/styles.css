@@ -515,8 +515,8 @@ body {
 }
 
 .image-holder{
-  height: 815px;
-  width: 647px;
+  height: 853px;
+  width: 659px;
   background: url('../images/pointing.png') no-repeat;
 /*  background-size: cover;*/
   transition: transform 1.5s ease;
@@ -528,16 +528,42 @@ body {
   transform: scale(.01);
 }
 
+
+.shots {
+  transition: transform 1.5s ease;
+  transform: scale(1);
+  transition-delay: 500ms;
+}
+
+.shots.scale{
+  transform: scale(.01);
+}
+
+
+
+
+
 .image-container{
   overflow: hidden;
   position: absolute;
   left: 46%;
-  top: 10%;
+  top: 5%;
   transform: translateX(-50%);
 /*  border: 3px solid green;*/
 }
 
 
+.may-the {
+    position: absolute;
+    top: 22%;
+    left: 20%;
+}
+
+.be-with {
+    position: absolute;
+    top: 47%;
+    right: 24%;
+}
 
 
 
@@ -547,6 +573,14 @@ body {
     background-color: red;
     margin-top: 200%;
 }
+
+
+
+
+
+
+
+
 
 /*
   __  __   ______   _____    _____            
@@ -611,8 +645,8 @@ body {
 }
 
 .image-holder{
-  height: 815px;
-  width: 647px;
+  height: 853px;
+  width: 659px;
   background: url('../images/pointing.png') no-repeat;
   background-size: cover;
   transition: transform 1.5s ease;

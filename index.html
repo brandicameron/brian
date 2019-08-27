@@ -83,9 +83,12 @@
     
     <div class='image-container'>
         
-      <div class='image-holder'></div>
-        
+      <div class='image-holder'></div>  
     </div>
+    <img class="may-the shots" src="images/may-the-shots.png" alt="May the Shots">
+        
+      <img class="be-with shots" src="images/be-with-you.png" alt="May the Shots">
+    
 </div>
     
      
@@ -98,6 +101,19 @@
   }
   else if(scroll > 400){
     $('.image-holder').removeClass('scale-img');
+  }
+})   
+    </script>
+    
+    
+    <script>
+        $(window).scroll(function(){
+  var scroll = $(window).scrollTop();
+  if((scroll > 0)&&(scroll < 400)){
+    $('.shots').addClass('scale');
+  }
+  else if(scroll > 400){
+    $('.shots').removeClass('scale');
   }
 })   
     </script>
