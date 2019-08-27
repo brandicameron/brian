@@ -9,7 +9,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/styles.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     
+    
+
 
 </head>
 
@@ -64,14 +68,92 @@
     
 <img class="title" src="images/title.png" alt="">
 
-<!--
 <div class="news-flip">
 <img class="newspaper" src="images/newspaper.png" alt="">   
 </div>
+
+ <img class="arrow blink-1" src="images/arrow.svg">
+
+<!--
+<div class="double-container">  
+<div class="space-container">    
+<video autoplay muted loop class="space-1">
+  <source src="images/space.mp4" type="video/mp4">
+</video>
+</div>
+</div>  
 -->
+    
+    
+    
+<div class='container'>
+    <div class='image-container'>
+        
+      <div class='image-holder'></div>
+        
+    </div>
+</div>
+    
+     
+     
+    <script>
+        $(window).scroll(function(){
+  var scroll = $(window).scrollTop();
+  if((scroll > 0)&&(scroll < 400)){
+    $('.image-holder').addClass('scale-img');
+  }
+  else if(scroll > 400){
+    $('.image-holder').removeClass('scale-img');
+  }
+})
+        
+    </script>
+    
+    
+    
+    
+ 
+<div class="spacer"></div>
+<!--
+<video autoplay muted loop class="space-2">
+  <source src="images/space.mp4" type="video/mp4">
+</video>
+-->
+    
 
+    
+    
 
-    <img class="arrow blink-1" src="images/arrow.svg">
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
