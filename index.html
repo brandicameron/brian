@@ -9,11 +9,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/styles.css">
-
+<link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     
-    
-
 
 </head>
 
@@ -25,6 +23,8 @@
 </audio>
 
 
+<div class="top-section">    
+    
 <div class="brick"></div>  
 
     
@@ -68,39 +68,104 @@
     
 <img class="title" src="images/title.png" alt="">
 
+<!--
 <div class="news-flip">
 <img class="newspaper" src="images/newspaper.png" alt="">   
 </div>
+-->
 
  <img class="arrow blink-1" src="images/arrow.svg" alt="Arrow Down to See More Goofy Brian Stuff">
 
+  </div>  
+
     
+    
+    
+    
+<!-- END OF TOP SECTION -->
+    
+    
+    
+    
+    
+    
+<div class='video-container'>
+      
 <video autoplay muted loop class="space-1">
   <source src="images/space.mp4" type="video/mp4">
 </video>
     
-<div class='container'>
+    <div class="star-section-content">
     
-    <div class='image-container'>
-        
-      <div class='image-holder'></div>  
-    </div>
     <img class="may-the shots" src="images/may-the-shots.png" alt="May the Shots">
         
+           <div class='pointing-image-container'>
+      <div class='brian-pointing'></div>  
+    </div>
+        
       <img class="be-with shots" src="images/be-with-you.png" alt="May the Shots">
+    </div>
+</div>
+ 
+    
+    
+    
+<div class="brian-always-container">    
+<div class="brian-always-pic"></div> 
+<div class="brian-always-text">Brian always wants...</div>    
+    
+</div>      
+    
+    
+    
+    
+<div class="dk-bg">
+     <img class="big-brian" src="images/brian-with-big-shot.png" alt="Brian with a giant shot of whiskey.">
+    <div class="swirl"></div>
+    
+    <div class="shots-text-1 shots-text">SHOTS!</div>
+    <div class="shots-text-2 shots-text">SHOTS!</div>
+    <div class="shots-text-3 shots-text">SHOTS!</div>
+    <div class="shots-text-4 shots-text">SHOTS!</div>
+    <div class="shots-text-5 shots-text">SHOTS!</div>
+    
     
 </div>
     
-     
-     
+    
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <script>
         $(window).scroll(function(){
   var scroll = $(window).scrollTop();
   if((scroll > 0)&&(scroll < 400)){
-    $('.image-holder').addClass('scale-img');
+    $('.brian-pointing').addClass('scale-img');
   }
   else if(scroll > 400){
-    $('.image-holder').removeClass('scale-img');
+    $('.brian-pointing').removeClass('scale-img');
   }
 })   
     </script>
@@ -117,18 +182,6 @@
   }
 })   
     </script>
-    
-    
-    
-    
- 
-<div class="spacer"></div>
-
-    
-
-    
-    
-
 
 </body>
 </html>
