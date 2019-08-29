@@ -515,7 +515,7 @@ body {
 
 .video-container {
     position: relative;
-    height: 100vh;
+    height: 82vh;
     overflow: hidden;
 }
 
@@ -545,8 +545,9 @@ body {
   width: 659px;
   background: url('../images/pointing.png') no-repeat;
   margin-left: -9%;
-  transition: transform 1.5s ease;
+  transition: transform 1s ease;
   transform: scale(.7);
+ transition-delay: .5s;    
   z-index: 9;
 }
 
@@ -555,13 +556,13 @@ body {
 }
 
 .shots {
-  transition: transform 1.5s ease;
+  transition: transform 1s ease;
   transform: scale(1);
-  transition-delay: 300ms;
+  transition-delay: .6s;
 }
 
 .shots.scale{
-  transform: scale(.01);
+  transform: scale(.001);
 }
 
 .may-the {
@@ -595,7 +596,7 @@ body {
 .shots-section {
     width: 100vw;
     height: auto;
-    padding: 70px 0 180px 0;
+    padding: 70px 0 170px 0;
     background: linear-gradient(25deg, #aa490d 30%, #eeb51b 70%);
 }
 
@@ -606,10 +607,10 @@ body {
   width: 46em;
   height: 46em;
   list-style: none;
-  margin: 5em auto 0;
+  margin: 8em auto 0;
   overflow: hidden;
   animation: circle 25s linear infinite;
-    z-index: 9;
+  z-index: 9;
 }
 
 @keyframes circle {
@@ -639,7 +640,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-width: 81px;
+  width: 81px;
   height: 96px;
   margin: -3em;
 }
@@ -705,7 +706,7 @@ width: 81px;
 
 .big-brian {
     position: absolute;
-    margin-top: 50px;
+    margin-top: 110px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -716,7 +717,7 @@ width: 81px;
 
 .shots-words-container {
     position: absolute;
-    margin-top: -710px;
+    margin-top: -700px;
 }
 
 .shots-text {
@@ -724,39 +725,64 @@ width: 81px;
         font-family: 'Anton', sans-serif;
         text-transform: uppercase;
         font-weight: bold;
-        color: #eeb51b;
-        color: #fff;
+        color: #a84919;
+/*        color: #fff;*/
         font-size: 2.5em;
         text-align: center;
         opacity: .8;
-         -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .2));
-        filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .2));
+         -webkit-filter: drop-shadow(6px 6px 7px rgb(7, 30, 100, .4));
+        filter: drop-shadow(6px 6px 7px rgb(236, 179, 50, .4));
+        opacity: 0;
 }
 
+
+.shot-anim {
+    animation: shots-text-anim 25ms linear forwards;
+    opacity: 0;
+}
+
+
+@keyframes shots-text-anim {
+0% {
+      font-size: 0px;
+    opacity: 1;
+  }
+100% {
+      font-size: 2.5em;
+    opacity: 1;
+  } 
+}
+
+
     .shots-text-1 {
-        transform: rotate(-30deg);
-        margin: -50px 0 0 25vw;
+    transform: rotate(-30deg);
+    margin: -50px 0 0 25vw;
+    animation-delay: .7s;
     }
 
 
     .shots-text-2 {
-        transform: rotate(15deg);
-        margin: 150px 0 0 20vw;
+    transform: rotate(15deg);
+    margin: 150px 0 0 20vw;
+    animation-delay: 1.7s;
     }
 
 .shots-text-3 {
-        transform: rotate(30deg);
-        margin: -100px 0 0 57vw;
+    transform: rotate(30deg);
+    margin: -100px 0 0 57vw;
+        animation-delay: 2s;
     }
 
 .shots-text-4 {
-        transform: rotate(-35deg);
-        margin: 100px 0 0 73vw;
+    transform: rotate(-35deg);
+    margin: 100px 0 0 73vw;
+    animation-delay: 2.5s;
     }
 
 .shots-text-5 {
-        transform: rotate(-30deg);
-        margin: 400px 0 0 56vw;
+    transform: rotate(-30deg);
+    margin: 400px 0 0 56vw;
+    animation-delay: 2.6s;
     }
 
 

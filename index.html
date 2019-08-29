@@ -162,13 +162,15 @@
 </ul>   
     
     
+<!--
     <div class="shots-words-container">
-    <div class="shots-text-1 shots-text">SHOTS!</div>
-    <div class="shots-text-2 shots-text">SHOTS!</div>
-    <div class="shots-text-3 shots-text">SHOTS!</div>
-    <div class="shots-text-4 shots-text">SHOTS!</div>
-    <div class="shots-text-5 shots-text">SHOTS!</div>
+    <div class="shots-text-1 shots-text shot-anim">SHOTS!</div>
+    <div class="shots-text-2 shots-text shot-anim">SHOTS!</div>
+    <div class="shots-text-3 shots-text shot-anim">SHOTS!</div>
+    <div class="shots-text-4 shots-text shot-anim">SHOTS!</div>
+    <div class="shots-text-5 shots-text shot-anim">SHOTS!</div>
     </div>
+-->
     
     
 </div>    
@@ -213,6 +215,22 @@
   }
 })   
     </script>
+    
+    
+<!--
+ <script>
+        $(window).scroll(function(){
+  var scroll = $(window).scrollTop();
+  if((scroll > 0)&&(scroll < 400)){
+    $('.shots-text').addClass('shot-anim');
+  }
+  else if(scroll > 400){
+    $('.shots-text').removeClass('shot-anim');
+  }
+})   
+    </script>
+-->
+
 
 
 </body>
