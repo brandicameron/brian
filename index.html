@@ -9,7 +9,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=anton&display=swap" rel="stylesheet">
+    
+    
+<script> src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"</script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
 
 
@@ -91,9 +96,7 @@
 
   </div>  
 
-    
-    
-    
+   
     
 <!--
    _____  _______         _____  
@@ -112,21 +115,20 @@
 <video autoplay muted loop class="space-1">
   <source src="images/space.mp4" type="video/mp4">
 </video>
-    
+     
     <div class="star-section-content">
-    
     <img class="may-the shots" src="images/may-the-shots.png" alt="May the Shots">
         
-           <div class='pointing-image-container'>
-      <div class='brian-pointing'></div>  
-    </div>
+
+      <div class='image-holder'></div>  
+
         
       <img class="be-with shots" src="images/be-with-you.png" alt="May the Shots">
     </div>
 </div>
  
     
-    
+
     
     
 
@@ -142,27 +144,28 @@
 -->
 
         
+<!--
 <div class="shots-section">
     
         <img class="big-brian" src="images/brian-with-big-shot.png" alt="Brian with a giant shot of whiskey.">
 
  <ul class='circle-container'>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
-  <li><img src='images/crown.png'></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
+  <li><img src='images/crown.png' alt="Image of a bottle of Crown"></li>
 </ul>   
     
     
@@ -176,29 +179,9 @@
     
     
 </div>    
-    
-    
-
-
-    
+-->
     
 
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 <!--
    _____  _____ _____  _____ _____ _______ _____ 
@@ -213,19 +196,20 @@
     
     
     
-    <script>
-        $(window).scroll(function(){
+   <script>
+     $(window).scroll(function(){
   var scroll = $(window).scrollTop();
   if((scroll > 0)&&(scroll < 400)){
-    $('.brian-pointing').addClass('scale-img');
+    $('.image-holder').addClass('scale-img');
   }
   else if(scroll > 400){
-    $('.brian-pointing').removeClass('scale-img');
+    $('.image-holder').removeClass('scale-img');
   }
-})   
+})
     </script>
     
-    
+  
+
     <script>
         $(window).scroll(function(){
   var scroll = $(window).scrollTop();
@@ -237,6 +221,7 @@
   }
 })   
     </script>
+
 
 </body>
 </html>

@@ -524,7 +524,7 @@ body {
     height: 100vh;
     width: 100vw;
     object-fit: fill;
-    filter: grayscale();
+    filter: grayscale(1);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -539,8 +539,8 @@ body {
     width: 800px;
 }
 
-.brian-pointing{
-  position: relative;
+.image-holder {
+/*  position: relative;*/
   height: 853px;
   width: 659px;
   background: url('../images/pointing.png') no-repeat;
@@ -549,6 +549,11 @@ body {
   transform: scale(.7);
   z-index: 9;
 }
+
+.image-holder.scale-img {
+  transform: scale(.01);
+}
+
 
 
 .shots {
@@ -568,14 +573,9 @@ body {
 }
 
 
-.brian-pointing.scale-img{
-  transform: scale(.01);
-}
-
-
 .be-with {
     margin-top: 150px;
-    margin-left: -230px;
+    margin-left: -180px;
 }
 
 
@@ -593,6 +593,7 @@ body {
 
 
 
+/*
 .shots-section {
     width: 100vw;
     height: auto;
@@ -606,7 +607,6 @@ body {
   position: relative;
   width: 46em;
   height: 46em;
-/*  border-radius: 50%;*/
   list-style: none;
   margin: 5em auto 0;
   overflow: hidden;
@@ -626,7 +626,6 @@ body {
 }
 
 .circle-container > * {
-   4 
   display: block;
   position: absolute;
   top: 50%;
@@ -639,6 +638,7 @@ body {
 .circle-container > :nth-of-type(1) {
   transform: rotate(0deg) translate(20em) rotate(0deg);
 }
+
 .circle-container > :nth-of-type(2) {
   transform: rotate(22.5deg) translate(20em) rotate(-22.5deg);
 }
@@ -747,6 +747,57 @@ body {
         transform: rotate(30deg);
         margin: 550px 0 0 820px;
     }
+
+
+
+*/
+
+
+
+
+.container{
+  height: 1800px;
+  font-family: roboto, san-serif;
+  font-size: 14px;
+}
+
+
+.image-holder{
+ height: 853px;
+  width: 659px;
+  background: url('../images/pointing.png') no-repeat;
+  margin-left: -9%;
+  transition: transform 1.5s ease;
+  transform: scale(.7);
+  z-index: 9;
+}
+
+.image-holder.scale-img{
+  transform: scale(.01);
+}
+
+.image-container{
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.labelText{
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.content{
+ padding: 24px;
+}
+
+
+
 
 
 

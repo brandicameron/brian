@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>You be the judge...</title>
+<meta charset="utf-8">
+<meta name="handheldfriendly" content="true">
+<meta name="mobileoptimized" content="240">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=anton&display=swap" rel="stylesheet">
+    
+    
+<script> src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"</script>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+
+</head>
+
+<body>
+    
+<div class='container'>
+    <div class='image-container'>
+      <div class='image-holder'>
+      </div>
+      <div class='labelText'>
+        Image Transition and Transform on Scroll
+      </div>
+    </div>
+  <div class='content'>
+    <h3>Transition and Transform</h3>
+    <p>Set the height of the outer container to be high. The image holder to have a fixed height and width will cover the entire width of the parent. Background image will be given in the css and transform and transiton options to be given. Add and remove class containing the transform using jquery. The idea is to set a range for the window scrollTop positions and remove or add class based on requirement. This is done inside the if-else loop.</p>
+  </div>
+</div>
+
+    
+<!--
+   _____  _____ _____  _____ _____ _______ _____ 
+  / ____|/ ____|  __ \|_   _|  __ \__   __/ ____|
+ | (___ | |    | |__) | | | | |__) | | | | (___  
+  \___ \| |    |  _  /  | | |  ___/  | |  \___ \ 
+  ____) | |____| | \ \ _| |_| |      | |  ____) |
+ |_____/ \_____|_|  \_\_____|_|      |_| |_____/ 
+                                                 
+                                                                                                      
+-->
+    
+       
+    <script>
+    $(window).scroll(function(){
+  var scroll = $(window).scrollTop();
+  if((scroll > 0)&&(scroll < 400)){
+    $('.image-holder').addClass('scale-img');
+  }
+  else if(scroll > 400){
+    $('.image-holder').removeClass('scale-img');
+  }
+})
+    </script>
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
