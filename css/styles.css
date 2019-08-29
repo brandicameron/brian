@@ -15,6 +15,13 @@ html {
   box-sizing: inherit;
 }
 
+/*Specifying fonts:
+
+font-family: 'Rye', cursive;
+font-family: 'Sancreek', cursive;
+font-family: 'Ewert', cursive;
+
+*/
 
 body {
     overflow-x: hidden;
@@ -82,7 +89,7 @@ body {
 
 .frame {
     position: absolute;
-    top: 270px;
+    top: 230px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99996;
@@ -92,7 +99,7 @@ body {
 
 #myVideo {
     position: absolute;
-    top: 270px;
+    top: 290px;
     left: 50%;
     transform: translateX(-50%);
     height: 466px;
@@ -224,7 +231,7 @@ body {
     bottom: 32px;
     z-index: 999997;
 /*    transform: scaleX(-1);*/
-    animation: ridearound ease 12s forwards;
+    animation: ridearound ease 20s forwards;
 }
 
 .head {
@@ -243,6 +250,22 @@ body {
     transform-origin: 0px 100px;
     z-index: -1;
 
+}
+
+.front-wheel {
+    position: absolute;
+    left: 312px;
+    top: 295px;
+    z-index: -1;
+    animation: spin linear 5s infinite;
+}
+
+.back-wheel {
+    position: absolute;
+    left: 10px;
+    top: 300px;
+    z-index: -1;
+    animation: spin linear 5s infinite;
 }
 
 
@@ -284,6 +307,17 @@ body {
 }
 
 
+@keyframes spin {
+        0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 .center-curtains-left {
     position: absolute;
     top: 0;
@@ -292,7 +326,7 @@ body {
     height: 91vh;
     z-index: 99996;
     animation: moveleft ease 5s forwards;
-    animation-delay: 4s;
+    animation-delay: 5s;
 }
 
 
@@ -304,9 +338,8 @@ body {
     height: 91vh;
     z-index: 99996;
     animation: moveright ease 5s forwards;
-    animation-delay: 4s;
+    animation-delay: 5s;
 }
-
 
 
 @keyframes ridearound {
@@ -515,7 +548,7 @@ body {
 
 .video-container {
     position: relative;
-    height: 82vh;
+    height: 95vh;
     overflow: hidden;
 }
 
@@ -597,9 +630,25 @@ body {
     width: 100vw;
     height: auto;
     padding: 70px 0 170px 0;
-    background: linear-gradient(25deg, #aa490d 30%, #eeb51b 70%);
+/*    background: linear-gradient(25deg, #aa490d 30%, #eeb51b 70%), url(../images/grunge-clouds-16.jpg);*/
+    background-image: url("../images/rays.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
 }
 
+
+/*
+.frame-curtain-2 {
+    margin-top: -70px;
+    width: 100vw;
+    max-height: 201px;
+    -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
+    filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
+    z-index: 999999999999;
+}
+*/
 
 
 .circle-container {
@@ -718,70 +767,52 @@ body {
 .shots-words-container {
     position: absolute;
     margin-top: -700px;
+    margin-left: -3%;
 }
 
 .shots-text {
         position: absolute;
-        font-family: 'Anton', sans-serif;
+        font-family: 'Sancreek', sans-serif;
         text-transform: uppercase;
         font-weight: bold;
         color: #a84919;
-/*        color: #fff;*/
-        font-size: 2.5em;
+        color: #212121;
+        font-size: 4em;
         text-align: center;
-        opacity: .8;
-         -webkit-filter: drop-shadow(6px 6px 7px rgb(7, 30, 100, .4));
-        filter: drop-shadow(6px 6px 7px rgb(236, 179, 50, .4));
-        opacity: 0;
+        -webkit-filter: drop-shadow(2px 2px 0px rgb(255, 255, 255));
+        filter: drop-shadow(2px 2px 0px rgb(255, 255, 255));
 }
 
-
-.shot-anim {
-    animation: shots-text-anim 25ms linear forwards;
-    opacity: 0;
-}
-
-
-@keyframes shots-text-anim {
-0% {
-      font-size: 0px;
-    opacity: 1;
-  }
-100% {
-      font-size: 2.5em;
-    opacity: 1;
-  } 
-}
 
 
     .shots-text-1 {
-    transform: rotate(-30deg);
-    margin: -50px 0 0 25vw;
+    transform: rotate(-30deg)!important;
+    margin: -80px 0 0 23vw;
     animation-delay: .7s;
     }
 
 
     .shots-text-2 {
-    transform: rotate(15deg);
-    margin: 150px 0 0 20vw;
+    transform: rotate(15deg)!important;
+    margin: 180px 0 0 18vw;
     animation-delay: 1.7s;
     }
 
 .shots-text-3 {
-    transform: rotate(30deg);
-    margin: -100px 0 0 57vw;
+    transform: rotate(30deg)!important;
+    margin: -120px 0 0 56vw;
         animation-delay: 2s;
     }
 
 .shots-text-4 {
-    transform: rotate(-35deg);
-    margin: 100px 0 0 73vw;
+    transform: rotate(-35deg)!important;
+    margin: 100px 0 0 76vw;
     animation-delay: 2.5s;
     }
 
 .shots-text-5 {
-    transform: rotate(-30deg);
-    margin: 400px 0 0 56vw;
+    transform: rotate(-20deg)!important;
+    margin: 350px 0 0 77vw;
     animation-delay: 2.6s;
     }
 

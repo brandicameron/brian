@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>You be the judge...</title>
+<title>Always a good show...</title>
 <meta charset="utf-8">
 <meta name="handheldfriendly" content="true">
 <meta name="mobileoptimized" content="240">
@@ -10,14 +10,21 @@
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/styles.css">
 <link href="https://fonts.googleapis.com/css?family=anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ewert|Rye|Sancreek&display=swap" rel="stylesheet">
     
     
 <script> src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"</script>
-    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    
+<!--  AOS Scripts   -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
+    
+    
 </head>
 
 <body>
@@ -53,7 +60,7 @@
 <img class="right-main-curtain" src="images/right.png" alt="Theatre Curtains Opening">
     
 <div class="dropFrame">  
-<img class="frame" src="images/frame.png" alt="">
+<img class="frame" src="images/cool-ass-frame.png" alt="">
     
 
     <video height="466" width="323" playsinline autoplay muted loop id="myVideo">
@@ -64,7 +71,11 @@
 </div> 
     
     
-<div class="ride">  
+<div class="ride">
+    
+<img class="back-wheel" src="images/back-wheel.png" alt="Brian on a bike!">
+    
+<img class="front-wheel" src="images/front-wheel.png" alt="Brian on a bike!">
 
 <img class="bike" src="images/bike.png" alt="Brian on a bike!">
     
@@ -139,6 +150,7 @@
 
         
 <div class="shots-section">
+
     
         <img class="big-brian" src="images/brian-with-big-shot.png" alt="Brian with a giant shot of whiskey.">
 
@@ -162,15 +174,13 @@
 </ul>   
     
     
-<!--
-    <div class="shots-words-container">
-    <div class="shots-text-1 shots-text shot-anim">SHOTS!</div>
-    <div class="shots-text-2 shots-text shot-anim">SHOTS!</div>
-    <div class="shots-text-3 shots-text shot-anim">SHOTS!</div>
-    <div class="shots-text-4 shots-text shot-anim">SHOTS!</div>
-    <div class="shots-text-5 shots-text shot-anim">SHOTS!</div>
+   <div class="shots-words-container">
+        <div class="shots-text-1 shots-text" data-aos="fade" data-aos-delay="1000" data-aos-duration="50">SHOTS!</div>
+        <div class="shots-text-2 shots-text" data-aos="fade" data-aos-delay="2000" data-aos-duration="50">SHOTS!</div>
+        <div class="shots-text-3 shots-text" data-aos="fade" data-aos-delay="2300" data-aos-duration="50">SHOTS!</div>
+        <div class="shots-text-4 shots-text" data-aos="fade" data-aos-delay="2900" data-aos-duration="50">SHOTS!</div>
+        <div class="shots-text-5 shots-text" data-aos="fade" data-aos-delay="2950" data-aos-duration="50">SHOTS!</div>
     </div>
--->
     
     
 </div>    
@@ -215,22 +225,15 @@
   }
 })   
     </script>
+        
     
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
     
-<!--
- <script>
-        $(window).scroll(function(){
-  var scroll = $(window).scrollTop();
-  if((scroll > 0)&&(scroll < 400)){
-    $('.shots-text').addClass('shot-anim');
-  }
-  else if(scroll > 400){
-    $('.shots-text').removeClass('shot-anim');
-  }
-})   
-    </script>
--->
-
+    <script>
+    AOS.init();
+  </script>
+    
 
 
 </body>
