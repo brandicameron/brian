@@ -554,8 +554,6 @@ body {
   transform: scale(.01);
 }
 
-
-
 .shots {
   transition: transform 1.5s ease;
   transform: scale(1);
@@ -566,17 +564,18 @@ body {
   transform: scale(.01);
 }
 
-
 .may-the {
     margin-top: -250px;
     margin-right: -200px;
 }
 
-
 .be-with {
     margin-top: 150px;
     margin-left: -180px;
 }
+
+
+
 
 
 
@@ -593,7 +592,6 @@ body {
 
 
 
-/*
 .shots-section {
     width: 100vw;
     height: auto;
@@ -715,6 +713,7 @@ body {
         text-transform: uppercase;
         font-weight: bold;
         color: #eeb51b;
+        color: #fff;
         font-size: 5.5em;
         text-align: center;
         opacity: .8;
@@ -750,51 +749,9 @@ body {
 
 
 
-*/
 
 
 
-
-.container{
-  height: 1800px;
-  font-family: roboto, san-serif;
-  font-size: 14px;
-}
-
-
-.image-holder{
- height: 853px;
-  width: 659px;
-  background: url('../images/pointing.png') no-repeat;
-  margin-left: -9%;
-  transition: transform 1.5s ease;
-  transform: scale(.7);
-  z-index: 9;
-}
-
-.image-holder.scale-img{
-  transform: scale(.01);
-}
-
-.image-container{
-  height: 500px;
-  overflow: hidden;
-  position: relative;
-}
-
-
-.labelText{
-  padding: 10px 20px;
-  background-color: #fff;
-  color: #000;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-.content{
- padding: 24px;
-}
 
 
 
