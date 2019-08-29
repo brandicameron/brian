@@ -231,7 +231,7 @@ body {
     bottom: 32px;
     z-index: 999997;
 /*    transform: scaleX(-1);*/
-    animation: ridearound ease 20s forwards;
+    animation: ridearound ease 15s forwards;
 }
 
 .head {
@@ -326,7 +326,7 @@ body {
     height: 91vh;
     z-index: 99996;
     animation: moveleft ease 5s forwards;
-    animation-delay: 5s;
+    animation-delay: 4.5s;
 }
 
 
@@ -338,7 +338,7 @@ body {
     height: 91vh;
     z-index: 99996;
     animation: moveright ease 5s forwards;
-    animation-delay: 5s;
+    animation-delay: 4.5s;
 }
 
 
