@@ -608,10 +608,9 @@ body {
   list-style: none;
   margin: 5em auto 0;
   overflow: hidden;
-  animation: circle 10s linear infinite;
+  animation: circle 25s linear infinite;
     z-index: 9;
 }
-
 
 @keyframes circle {
 0% {
@@ -619,8 +618,20 @@ body {
   }
 
 100% {
-      transform: rotate(360deg);   
+      transform: rotate(360deg);
   }
+}
+
+
+@keyframes bottle-1 {
+0% {
+      transform: rotate(0deg); 
+  }
+    
+100% {
+      transform: rotate(-360deg); 
+  }
+    
 }
 
 .circle-container > * {
@@ -628,14 +639,15 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 5em;
-  height: 5em;
+width: 81px;
+  height: 96px;
   margin: -3em;
 }
 
 .circle-container > :nth-of-type(1) {
-  transform: rotate(0deg) translate(20em) rotate(0deg);
+  transform: rotate(0deg) translate(20em) rotate(0deg);  
 }
+
 
 .circle-container > :nth-of-type(2) {
   transform: rotate(22.5deg) translate(20em) rotate(-22.5deg);
@@ -714,37 +726,37 @@ body {
         font-weight: bold;
         color: #eeb51b;
         color: #fff;
-        font-size: 5.5em;
+        font-size: 2.5em;
         text-align: center;
         opacity: .8;
-         -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-        filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
+         -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .2));
+        filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .2));
 }
 
     .shots-text-1 {
         transform: rotate(-30deg);
-        margin: -50px 0 0 330px;
+        margin: -50px 0 0 25vw;
     }
 
 
     .shots-text-2 {
         transform: rotate(15deg);
-        margin: 450px 0 0 320px;
+        margin: 150px 0 0 20vw;
     }
 
 .shots-text-3 {
         transform: rotate(30deg);
-        margin: -90px 0 0 850px;
+        margin: -100px 0 0 57vw;
     }
 
 .shots-text-4 {
         transform: rotate(-35deg);
-        margin: 290px 0 0 1050px;
+        margin: 100px 0 0 73vw;
     }
 
 .shots-text-5 {
-        transform: rotate(30deg);
-        margin: 550px 0 0 820px;
+        transform: rotate(-30deg);
+        margin: 400px 0 0 56vw;
     }
 
 
