@@ -39,11 +39,10 @@ body {
     |_|   \____/ |_|     
 */
 
-
+/*#region*/
 .top-section {
   height: 100vh;
 }
-
 
 
 .frame-curtain {
@@ -549,6 +548,8 @@ body {
 /*#endregion*/
 
 
+/*#endregion*/
+
 
 
 /* 
@@ -666,6 +667,9 @@ body {
 .rays {
   background-image: url(../images/rays.svg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
   filter: brightness(.2) saturate(5);
   opacity: .75;
   height: 65em;
@@ -888,6 +892,9 @@ body {
     height: 85vh;
   }
 
+  .big-brian {
+  margin-top: -82%;
+}
 
 
 }
@@ -962,21 +969,18 @@ body {
   margin-left: -180px;
 } 
  
+  .rays {
+    margin-top: -30%;
+  }
+  
   
   .shots-section {
-  border: 1px solid rgb(0, 0, 0);
-  width: 100vw;
-  height: 40em;
-  margin-top: -1px;
-  background-image: url("../images/rays.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 47em;
 }
   
   
   .big-brian {
-  margin-top: 30%;
+  margin-top: -190%;
   width: 350px;
   z-index: 10;
 }
@@ -991,7 +995,7 @@ body {
   
   .shots-text-1-m {
   font-size: 5em;
-  margin: 100px auto 0 auto;
+  margin: -220px auto 0 auto;
   width: 100vw;
   transform: rotate(-20deg) !important;
   animation-delay: .7s;
