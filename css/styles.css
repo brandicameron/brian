@@ -925,11 +925,40 @@ body {
   animation-delay: 7s;
 }
   
+  .image-holder {
+    background-size: 50%;
+    background-position: center;
+    margin-left: 59%;
+    margin-top: -230px;
+/*    margin-left: 55%;*/
+  }
   
+ .may-the {
+  margin-top: -650px;
+  margin-right: -700px;
+  margin-left: -50px;
+  width: 200px;
+}
+
+.be-with {
+  margin-top: 150px;
+  margin-left: -390px;
+ width: 150px;
+}
   
-  
-  
-  
+ .star-section-content {
+  position: absolute;
+  display: flex;
+   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 610px;
+  width: 400px;
+  top: 62%;
+  margin-top: -305px;
+  left: 50%;
+  margin-left: -180px;
+} 
   
   
   
