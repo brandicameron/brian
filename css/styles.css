@@ -647,7 +647,7 @@ body {
   width: 46em;
   height: 46em;
   list-style: none;
-  margin: 8em auto 0;
+  margin: 9em auto 0;
   overflow: hidden;
   animation: circle 25s linear infinite;
   z-index: 9;
@@ -689,8 +689,6 @@ body {
 .circle-container > :nth-of-type(1) {
   transform: rotate(0deg) translate(20em) rotate(0deg);  
 }
-
-
 .circle-container > :nth-of-type(2) {
   transform: rotate(22.5deg) translate(20em) rotate(-22.5deg);
 }
@@ -786,13 +784,13 @@ body {
 
     .shots-text-2 {
     transform: rotate(15deg)!important;
-    margin: 180px 0 0 18vw;
+    margin: 250px 0 0 8vw;
     animation-delay: 1.7s;
     }
 
 .shots-text-3 {
     transform: rotate(30deg)!important;
-    margin: -120px 0 0 56vw;
+    margin: -140px 0 0 56vw;
         animation-delay: 2s;
     }
 
@@ -804,7 +802,7 @@ body {
 
 .shots-text-5 {
     transform: rotate(-20deg)!important;
-    margin: 350px 0 0 77vw;
+    margin: 400px 0 0 71vw;
     animation-delay: 2.6s;
     }
 
@@ -815,123 +813,6 @@ body {
 
 
 
-
-
-
-
-
-
-/*
-   _____ __          __ _____  _____   _      
-  / ____|\ \        / /|_   _||  __ \ | |     
- | (___   \ \  /\  / /   | |  | |__) || |     
-  \___ \   \ \/  \/ /    | |  |  _  / | |     
-  ____) |   \  /\  /    _| |_ | | \ \ | |____ 
- |_____/     \/  \/    |_____||_|  \_\|______|
-                                              
-                                              
-*/
-
-
-
-
-/*
-.dk-bg {
-    position: relative;
-    background: #222222;
-    height: 900px;
-    width: 100vw;
-    overflow: hidden;
-}
-
-
-.big-brian {
-    position: absolute;
-    z-index: 1;
-    bottom: 0px;
-    left: 35%;
-     -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-    filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-}
-
-.swirl {
-    position: absolute;
-    background-image: url(../images/swirl.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
-    animation: swirl 15s linear infinite;
-    
-}
-
-
-@keyframes swirl {
-
-
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-*/
-
-    
-    
-/*
-.shots-text {
-        position: absolute;
-        font-family: 'Rye', cursive;
-        color: #eeb51b;
-        font-size: 3.5em;
-        z-index: 10;
-        text-align: center;
-        opacity: .8;
-         -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-    filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-}
-
-    .shots-text-1 {
-        transform: rotate(-30deg);
-        margin: 150px 0 0 110px;
-    }
-
-
-    .shots-text-2 {
-        transform: rotate(15deg);
-        margin: 630px 0 0 150px;
-    }
-
-.shots-text-3 {
-        transform: rotate(20deg);
-        right: 0;
-        margin: 130px 350px; 0 0;
-    }
-
-.shots-text-4 {
-        transform: rotate(-35deg);
-        right: 0;
-        margin: 550px 150px; 0 0;
-    }
-
-.shots-text-5 {
-        transform: rotate(0deg);
-        right: 0;
-        margin: 775px 350px; 0 0;
-    }
-*/
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
 
 
 /*
@@ -953,9 +834,6 @@ body {
     
     .frame {
     top: 200px;
-    transform: translateX(-50%);
-    height: 360px;
-    width: 275px;
 }
 
 
@@ -966,7 +844,7 @@ body {
     
 
     #myVideo {
-    top: 200px;
+    top: 250px;
     height: 360px;
     width: 323px;
 }
@@ -980,49 +858,7 @@ body {
         height: 85vh;
     }
     
-    
-    .container{
-    position: absolute;
-    top: 100%; 
-    width: 100vw;
-    height: 100vh;
-/*    border: 3px solid red;*/
-}
-
-.space-1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 100%;
-    height: 100%;
-}
-
-.image-holder{
-  height: 853px;
-  width: 659px;
-  background: url('../images/pointing.png') no-repeat;
-  background-size: cover;
-  transition: transform 1.5s ease;
-  transform: scale(.7);
-    
-/*  border: 3px solid yellow; */
-}
-
-.image-holder.scale-img{
-  transform: scale(.01);
-}
-
-.image-container{
-  overflow: hidden;
-  position: absolute;
-  left: 46%;
-  top: -12%;
-  transform: translateX(-50%);
-/*  border: 3px solid blue;*/
-}
-
-
-   
+  
     
 }
 
@@ -1045,25 +881,6 @@ body {
         display: none;
     }
     
-    .frame {
-        top: 23%;
-        height: 400px;
-        width: 300px;
-    }
-    
-    
-    .dropFrame {
-        top: 170px;
-    }
-    
-/*
-    
-    #myVideo {
-         top: 23%;
-        height: 400px;
-        width: 323px;
-    }
-*/
     
     .title {
     top: 80px;
