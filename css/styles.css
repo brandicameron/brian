@@ -119,7 +119,8 @@ body {
   animation-delay: 5s;
 }
 
-
+/* Dropframe Bounce Animations*/
+/*#region*/
 @-webkit-keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
@@ -239,6 +240,7 @@ body {
     animation-timing-function: ease-out;
   }
 }
+/*#endregion*/
 
 
 .ride {
@@ -325,7 +327,6 @@ body {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
@@ -544,6 +545,7 @@ body {
     opacity: 0;
   }
 }
+
 /*#endregion*/
 
 
@@ -915,8 +917,13 @@ body {
     animation: ridearound linear 3s forwards;
   }
   
+  .center-curtains-right, .center-curtains-left {
+  animation-delay: 2.5s;
+}
   
-  
+  .blink-1 {
+  animation-delay: 7s;
+}
   
   
   
