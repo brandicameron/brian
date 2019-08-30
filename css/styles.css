@@ -894,17 +894,46 @@ body {
   }
 
   .left-main-curtain {
-    left: -180px;
+    left: -200px;
   }
 
   .right-main-curtain {
-    right: -170px;
+    right: -200px;
     ;
   }
-
 
   .monkey-1 {
     display: none;
   }
 
+  .dropFrame {
+    margin-top: -50px;
+  }
+  
+  .ride {
+    bottom: 0px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
