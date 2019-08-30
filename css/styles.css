@@ -798,7 +798,7 @@ body {
 
 .big-brian {
   position: absolute;
-  margin-top: -50%;
+  margin-top: -800px;
   left: 50%;
   transform: translateX(-50%);
   width: 500px;
@@ -980,7 +980,7 @@ body {
   
   
   .big-brian {
-  margin-top: -190%;
+  margin-top: -140%;
   width: 350px;
   z-index: 10;
 }
@@ -995,7 +995,7 @@ body {
   
   .shots-text-1-m {
   font-size: 5em;
-  margin: -220px auto 0 auto;
+  margin: -180px auto 0 auto;
   width: 100vw;
   transform: rotate(-20deg) !important;
   animation-delay: .7s;
