@@ -656,21 +656,27 @@ body {
   height: 65em;
   margin-top: -1px;
   /*    background: linear-gradient(25deg, #aa490d 30%, #eeb51b 70%), url(../images/grunge-clouds-16.jpg);*/
-  background-image: url("../images/rays.jpg");
-  background-size: cover;
+  background-image: url("../images/chipboard.jpg");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  overflow: hidden;
   /*    background-blend-mode: soft-light;*/
 }
 
+.rays {
+  background-image: url(../images/rays.svg);
+  background-size: cover;
+  filter: brightness(.2) saturate(5);
+  opacity: .75;
+  height: 65em;
+}
 
 .circle-container {
   position: relative;
   width: 46em;
   height: 46em;
   list-style: none;
-  margin: 9em auto 0;
-  overflow: hidden;
+  margin: -53em auto 0;
   animation: circle 25s linear infinite;
   z-index: 9;
 }
@@ -788,7 +794,7 @@ body {
 
 .big-brian {
   position: absolute;
-  margin-top: 14%;
+  margin-top: -50%;
   left: 50%;
   transform: translateX(-50%);
   width: 500px;
