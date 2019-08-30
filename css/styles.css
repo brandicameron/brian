@@ -93,17 +93,18 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 99996;
+    width: 300px;
 }
 
 
 
 #myVideo {
     position: absolute;
-    top: 290px;
+    top: 225px;
     left: 50%;
     transform: translateX(-50%);
     height: 466px;
-    width: 323px;
+    width: 260px;
     z-index: 99995;
 }
 
@@ -225,13 +226,12 @@ body {
 }
 
 
-
 .ride {
      position: absolute;
     bottom: 32px;
     z-index: 999997;
 /*    transform: scaleX(-1);*/
-    animation: ridearound ease 15s forwards;
+    animation: ridearound linear 12s forwards;
 }
 
 .head {
@@ -548,7 +548,7 @@ body {
 
 .video-container {
     position: relative;
-    height: 95vh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -563,13 +563,16 @@ body {
 }
 
 .star-section-content {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 610px;
-    margin: 10% auto;
     width: 800px;
+    top: 50%;
+    margin-top: -305px;
+    left: 50%;
+    margin-left: -400px;
 }
 
 .image-holder {
@@ -625,30 +628,18 @@ body {
 */
 
 
-
+/*For some strange reason, the border below fixes the top margin issue */
 .shots-section {
+    border: 1px solid rgb(0, 0, 0);
     width: 100vw;
-    height: auto;
-    padding: 70px 0 170px 0;
+    height: 65em;
 /*    background: linear-gradient(25deg, #aa490d 30%, #eeb51b 70%), url(../images/grunge-clouds-16.jpg);*/
     background-image: url("../images/rays.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode: soft-light;
+/*    background-blend-mode: soft-light;*/
 }
-
-
-/*
-.frame-curtain-2 {
-    margin-top: -70px;
-    width: 100vw;
-    max-height: 201px;
-    -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-    filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-    z-index: 999999999999;
-}
-*/
 
 
 .circle-container {
@@ -660,6 +651,7 @@ body {
   overflow: hidden;
   animation: circle 25s linear infinite;
   z-index: 9;
+/*  border: 2px solid green;*/
 }
 
 @keyframes circle {
@@ -755,9 +747,10 @@ body {
 
 .big-brian {
     position: absolute;
-    margin-top: 110px;
+    margin-top: 14%;
     left: 50%;
     transform: translateX(-50%);
+    width: 500px;
     z-index: 10;
 }
 
@@ -765,9 +758,8 @@ body {
 
 
 .shots-words-container {
-    position: absolute;
-    margin-top: -700px;
-    margin-left: -3%;
+    position: relative;
+    margin: -650px auto 0 auto;
 }
 
 .shots-text {
