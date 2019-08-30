@@ -912,6 +912,7 @@ body {
   
   .ride {
     bottom: 0px;
+    animation: ridearound linear 3s forwards;
   }
   
   
