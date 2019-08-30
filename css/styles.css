@@ -673,7 +673,6 @@ body {
   overflow: hidden;
   animation: circle 25s linear infinite;
   z-index: 9;
-  /*  border: 2px solid green;*/
 }
 
 @keyframes circle {
@@ -947,11 +946,8 @@ body {
 }
   
  .star-section-content {
-  position: absolute;
   display: flex;
-   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   height: 610px;
   width: 400px;
   top: 62%;
@@ -959,14 +955,41 @@ body {
   left: 50%;
   margin-left: -180px;
 } 
+ 
+  
+  .shots-section {
+  border: 1px solid rgb(0, 0, 0);
+  width: 100vw;
+  height: 40em;
+  margin-top: -1px;
+  background-image: url("../images/rays.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
   
   
+  .big-brian {
+  margin-top: 30%;
+  width: 350px;
+  z-index: 10;
+}
   
+  .circle-container {
+  display: none;
+}
   
+
+  .shots-text-2, .shots-text-3, .shots-text-4, .shots-text-5 {display: none;}
+
   
-  
-  
-  
+  .shots-text-1-m {
+  font-size: 5em;
+  margin: 100px auto 0 auto;
+  width: 100vw;
+  transform: rotate(-20deg) !important;
+  animation-delay: .7s;
+  }
   
   
   
