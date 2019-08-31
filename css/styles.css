@@ -574,6 +574,7 @@ body {
   overflow: hidden;
 }
 
+/*
 .space-1 {
   position: absolute;
   height: 100vh;
@@ -583,26 +584,34 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+*/
+
+
+#field {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  z-index: -9;
+}
+
 
 .star-section-content {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 610px;
-  width: 800px;
-  top: 50%;
-  margin-top: -305px;
-  left: 50%;
-  margin-left: -400px;
+  height: 97vh;
+  width: 70vw;
+  margin: -62% auto 0 auto;
 }
 
 .image-holder {
-  /*  position: relative;*/
-  height: 853px;
-  width: 659px;
-  background: url('../images/pointing.png') no-repeat;
-  margin-left: -9%;
   transition: transform 1s ease;
   transform: scale(.7);
   transition-delay: .5s;
@@ -625,12 +634,12 @@ body {
 
 .may-the {
   margin-top: -250px;
-  margin-right: -200px;
+  margin-right: -240px;
 }
 
 .be-with {
   margin-top: 150px;
-  margin-left: -180px;
+  margin-left: -170px;
 }
 
 
@@ -862,12 +871,6 @@ body {
 
 
 
-
-
-
-
-
-
 /*
   __  __  ______  _____  _____           
  |  \/  ||  ____||  __ \|_   _|    /\    
@@ -895,8 +898,6 @@ body {
   .big-brian {
   margin-top: -82%;
 }
-
-
 }
 
 @media screen and (max-width: 650px) {
@@ -938,8 +939,7 @@ body {
 }
   
   .image-holder {
-    background-size: 50%;
-    background-position: center;
+    width: 50%;
     margin-left: 59%;
     margin-top: -230px;
 /*    margin-left: 55%;*/
