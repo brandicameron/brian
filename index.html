@@ -25,7 +25,7 @@
 
 
 <body>
-      <canvas id="field"></canvas>
+<!--      <canvas id="field"></canvas>-->
 
 
 
@@ -40,24 +40,18 @@
     
 -->
   <div class="top-section">
+    
+    
   
-      
+    <div class="curtains-container">
     <img class="frame-curtain" src="images/top-swag.png" alt="Theatre Curtains Opening">
 
     <img class="left-main-curtain" src="images/left.png" alt="Theatre Curtains Opening">
 
     <img class="right-main-curtain" src="images/right.png" alt="Theatre Curtains Opening">
-
-<!--
-    <div class="dropFrame">
-      <img class="frame" src="images/cool-ass-frame.png" alt="">
-      <video height="466" width="323" playsinline autoplay muted loop id="myVideo">
-        <source src="images/Brian-c.mp4" type="video/mp4">
-        <p>Sorry, but your browser doesn't support HTML5 video.</p>
-      </video>
-    </div>
--->
-
+     </div>
+    
+    
 
     <div class="ride">
       <img class="back-wheel" src="images/back-wheel.png" alt="Brian on a bike!">
@@ -70,14 +64,19 @@
     <img class="center-curtains-left" src="images/center-curtain.png" alt="Theatre Curtains Opening">
 
     <img class="center-curtains-right" src="images/center-curtain.png" alt="Theatre Curtains Opening">
+    
+    
+    <div class="circle-frame-container">
+       <img class="circle-back" src="images/circle-back.png" alt="">
+       <img class="circle-rays" src="images/circle-rays.png" alt="">
+       <img class="circle-frame" src="images/circle-frame.png" alt="">
+    </div>
  
     <img class="brian-pointing" src="images/pointing.png" alt="Photo of Brian Pointing">
 
     <img class="monkey-1" src="images/sock-monkey-1.png" alt="">
-<!--
 
     <img class="title" src="images/title.png" alt="">
--->
 
     <!--
 <div class="news-flip">
@@ -86,11 +85,13 @@
 -->
     
     <div class="floor-top"></div>
-    
-    <img class="arrow blink-1" src="images/arrow.svg" alt="Arrow Down to See More Goofy Brian Stuff">
-    
+  
     <div class="crown-section">
      <img class="crown" src="images/crown.png" alt="Bottle of Crown Royal">
+     <img class="crown" src="images/crown.png" alt="Bottle of Crown Royal">
+     <img class="crown" src="images/crown.png" alt="Bottle of Crown Royal">
+      <img class="crown" src="images/crown.png" alt="Bottle of Crown Royal">
+       <img class="crown" src="images/crown.png" alt="Bottle of Crown Royal">
      <img class="crown" src="images/crown.png" alt="Bottle of Crown Royal">
      <img class="crown" src="images/crown.png" alt="Bottle of Crown Royal">
       <img class="crown" src="images/crown.png" alt="Bottle of Crown Royal">
@@ -105,6 +106,8 @@
   
   
   <div class="floor-section">
+    
+    <img class="stand" src="images/stand.png" alt="A stand for Brian to stand on lol.">
      <img class="strongman" src="images/strongman.png" alt="Brian juggling shots.">
   <div class="floor"></div>
     
@@ -143,18 +146,10 @@
                                  
   
 -->
-    
-  <div class="star-section">
+
   
-    
-    <div class="star-section-content">
-<!--      <img class="may-the shots" src="images/may-the-shots.png" alt="May the Shots">-->
-<!--      <img class="image-holder" src="images/pointing.png" alt="Photo of Brian Pointing">-->
-<!--      <img class="be-with shots" src="images/be-with-you.png" alt="May the Shots">-->
-    </div>
-    </div>
-
-
+  
+  
 
   <!--
    _____ _    _  ____ _______ _____ 
@@ -223,7 +218,7 @@
 -->
   
   
-    <script>
+   <script>
   var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
@@ -320,7 +315,7 @@ function draw() {
       	field.height = window.innerHeight;
   
   	// Play with the "a" value to create streams...it's fun!
-    f.fillStyle = "rgba(0, 0, 0, 0.8)";
+    f.fillStyle = "rgba(19, 22, 29, 0.8)";
     f.fillRect(0, 0, field.width, field.height);
 
     for (var i = numStars; i < starsToDraw; i++) {
@@ -335,11 +330,11 @@ function draw() {
 
 // Original timing of the screensaver
 setInterval(draw, 40);
+
+
+  
   </script>
-  
-  
-<!--
-  <script>
+ <script>
     $(window).scroll(function() {
       var scroll = $(window).scrollTop();
       if ((scroll > 0) && (scroll < 400)) {
@@ -362,7 +357,6 @@ setInterval(draw, 40);
       }
     })
   </script>
--->
 
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

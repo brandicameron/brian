@@ -17,17 +17,13 @@ html {
   box-sizing: inherit;
 }
 
-/*Specifying fonts:
-
-font-family: 'Rye', cursive;
-font-family: 'Sancreek', cursive;
-font-family: 'Ewert', cursive;
-
-*/
-
 body {
   overflow-x: hidden;
   width: 100vw;
+  background: url(../images/clouds-n.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 #field {
@@ -54,8 +50,12 @@ body {
 */
 
 /*#region*/
-.top-section {
-  height: 100vh;
+
+
+.curtains-container {
+  position: fixed;
+  width: 100vw;
+  z-index: 999999999999999999; 
 }
 
 
@@ -67,6 +67,7 @@ body {
   max-height: 201px;
   -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
   filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
+  filter: brightness(.7);
   z-index: 999999999999;
 }
 
@@ -77,56 +78,185 @@ body {
   height: 100vh;
   -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
   filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
+  filter: brightness(.8);
   z-index: 999999;
 }
 
 .right-main-curtain {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   height: 100vh;
   -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
   filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
+  filter: brightness(.8);
   z-index: 999999;
 }
 
-
-/*
-
-.frame {
+.ride {
   position: absolute;
-  top: 16em;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 47vh;
-  width: auto;
+  bottom: 32px;
+  z-index: 999997;
+  animation: ridearound linear 4.5s forwards;
+}
+
+.head {
+  position: absolute;
+  bottom: 302px;
+  left: 28%;
+  animation: head ease 3s infinite;
+}
+
+.arm {
+  position: absolute;
+  bottom: 300px;
+  left: 49%;
+  animation: wave ease 1s infinite;
+  transform: rotate(-5deg);
+  transform-origin: 0px 100px;
+  z-index: -1;
+
+}
+
+.front-wheel {
+  position: absolute;
+  left: 312px;
+  top: 295px;
+  z-index: -1;
+  animation: spin linear 5s infinite;
+}
+
+.back-wheel {
+  position: absolute;
+  left: 10px;
+  top: 300px;
+  z-index: -1;
+  animation: spin linear 5s infinite;
+}
+
+@keyframes head {
+  0% {
+    right: 100%;
+    opacity: 1;
+  }
+
+  50% {
+    right: 100%;
+    transform: rotate(12deg);
+    opacity: 1;
+  }
+
+  100% {
+    right: -150%;
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0% {
+    right: 100%;
+    opacity: 1;
+  }
+
+  50% {
+    right: 100%;
+    transform: rotate(7deg);
+    opacity: 1;
+  }
+
+  100% {
+    right: -150%;
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.center-curtains-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 91vh;
   z-index: 99996;
+  animation: moveleft ease 4s forwards;
+  animation-delay: 4.25s;
 }
-*/
 
-/*
-#myVideo {
-  position: absolute;
-  top: 16.3em;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 99995;
-  height: 45vh;
-  width: auto;
-}
-*/
 
-/*
-.dropFrame {
+.center-curtains-right {
   position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-animation: bounce-in-top 1.1s both;
-  animation: bounce-in-top 1.1s both;
-  animation-delay: 5s;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 91vh;
+  z-index: 99996;
+  animation: moveright ease 3.25s forwards;
+  animation-delay: 4.25s;
 }
-*/
+
+
+@keyframes ridearound {
+  0% {
+    right: 100%;
+    opacity: 1;
+  }
+
+  99.5% {
+    right: -50%;
+    opacity: 1;
+  }
+    100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+@keyframes moveleft {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+
+  100% {
+    left: -100%;
+    opacity: 1;
+  }
+}
+
+
+@keyframes moveright {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+
+  99% {
+    right: -60%;
+    opacity: 1;
+  }
+   99.5% {
+    right: -60%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+
 
 /* Dropframe Bounce Animations*/
 /*#region*/
@@ -251,165 +381,73 @@ body {
 }
 /*#endregion*/
 
+.title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  top: -53em;
+  z-index: 999;
+  width: 80vw;
+  max-width: 502px;
+  filter: brightness(.9);
+  z-index: 1;
+  animation: bounce-in-top 1.1s both;
+  animation-delay: 5s;
+}
 
-.ride {
+
+.circle-frame-container {
   position: absolute;
-  bottom: 32px;
-  z-index: 999997;
-  animation: ridearound linear 8s forwards;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 25em;
+  
 }
 
-.head {
+
+.circle-back {
+  top: -30px;
   position: absolute;
-  bottom: 302px;
-  left: 28%;
-  animation: head ease 3s infinite;
 }
 
-.arm {
+.circle-rays {
+  top: -30px;
   position: absolute;
-  bottom: 300px;
-  left: 49%;
-  animation: wave ease 1s infinite;
-  transform: rotate(-5deg);
-  transform-origin: 0px 100px;
-  z-index: -1;
-
+  animation: swirl 50s linear infinite;
+  
 }
 
-.front-wheel {
-  position: absolute;
-  left: 312px;
-  top: 295px;
-  z-index: -1;
-  animation: spin linear 5s infinite;
-}
-
-.back-wheel {
-  position: absolute;
-  left: 10px;
-  top: 300px;
-  z-index: -1;
-  animation: spin linear 5s infinite;
-}
-
-
-@keyframes head {
-  0% {
-    right: 100%;
-    opacity: 1;
-  }
-
-  50% {
-    right: 100%;
-    transform: rotate(12deg);
-    opacity: 1;
-  }
-
-  100% {
-    right: -150%;
-    opacity: 1;
-  }
-}
-
-
-@keyframes wave {
-  0% {
-    right: 100%;
-    opacity: 1;
-  }
-
-  50% {
-    right: 100%;
-    transform: rotate(7deg);
-    opacity: 1;
-  }
-
-  100% {
-    right: -150%;
-    opacity: 1;
-  }
-}
-
-
-@keyframes spin {
+@keyframes swirl {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
 
-.center-curtains-left {
+.circle-frame {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50vw;
-  height: 91vh;
-  z-index: 99996;
-  animation: moveleft ease 5s forwards;
-  animation-delay: 4.5s;
-}
-
-
-.center-curtains-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50vw;
-  height: 91vh;
-  z-index: 99996;
-  animation: moveright ease 5s forwards;
-  animation-delay: 4.5s;
-}
-
-
-@keyframes ridearound {
-  0% {
-    right: 100%;
-    opacity: 1;
-  }
-
-  100% {
-    right: -150%;
-    opacity: 1;
-  }
-}
-
-
-@keyframes moveleft {
-  0% {
-    left: 0;
-    opacity: 1;
-  }
-
-  100% {
-    left: -100%;
-    opacity: 1;
-  }
-}
-
-
-@keyframes moveright {
-  0% {
-    right: 0;
-    opacity: 1;
-  }
-
-  100% {
-    right: -100%;
-    opacity: 1;
-  }
+  margin-top: -80px;
+    -webkit-filter: drop-shadow(2px 4px 10px rgb(0, 0, 0, .8));
+  filter: drop-shadow(2px 4px 10px rgb(0, 0, 0, .8));
 }
 
 
 .brian-pointing {
-  margin-top: 3em;
-  animation: zoom 2s ease forwards;
+  position: relative;
+  margin-top: 8em;
+  margin-left: -3em;
+  filter: brightness(.83);
+  animation: zoom 1.5s ease forwards;
   animation-delay: 6s;
   opacity: 0;
+  z-index: 2;
 }
 
 @keyframes zoom {
@@ -419,7 +457,7 @@ body {
   }
 
   100% {
-    transform: scale(.65);
+    transform: scale(.60);
     opacity: 1;
   }
 }
@@ -452,23 +490,6 @@ body {
   }
 }
 
-
-/*
-.title {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  top: 8em;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-  width: 80vw;
-  max-width: 616px;
-  -webkit-filter: drop-shadow(2px 2px 1px rgb(0, 0, 0, .3));
-  filter: drop-shadow(2px 2px 1px rgb(0, 0, 0, .3));
-  z-index: 9;
-}
-*/
 
 /*Newspaper*/
 /*#region*/
@@ -520,78 +541,30 @@ body {
 /*#endregion*/
 
 .floor-top {
-/*  position: absolute;*/
+  position: absolute;
   background-image: url(../images/floor.jpg);
   height: 164px;
   width: 100vw;
   background-repeat: repeat-x;
-  margin-top: -5em;
-  animation: fall 2s ease forwards;
-  animation-delay: 8s;
+  bottom: -4.5em;
+  animation: fall 1s ease forwards;
+  animation-delay: 9s;
 }
 
 @keyframes fall {
   0% {
-    margin-top: -5em;
+    bottom: 0;
   }
   
    50% {
-    margin-top: 15em;
+    bottom: -15em;
   }
 
   100% {
-    transform: scale(.65);
+    bottom: -16em;
     opacity: 0;
   }
 }
-
-.arrow {
-  font-family: sans-serif;
-  font-size: 3em;
-  color: #e5b218;
-  position: absolute;
-  left: 50%;
-  bottom: 7%;
-  z-index: 99999;
-  opacity: 0;
-}
-
-
-/* Arrow Blink Code */
-/*#region*/
-.blink-1 {
-  -webkit-animation: blink-1 0.6s both;
-  animation: blink-1 0.6s;
-  animation-delay: 9s;
-  animation-iteration-count: 2;
-}
-
-
-@-webkit-keyframes blink-1 {
-  50%,
-  100% {
-    opacity: .7;
-  }
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
-
-@keyframes blink-1 {
-  0%,
-  50%,
-  100% {
-    opacity: .7;
-  }
-  0%,
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
-
-/*#endregion*/
 
 
 .crown-section {
@@ -631,6 +604,34 @@ body {
   animation-delay: 9.7s;
 }
 
+.crown-section > :nth-of-type(5) {
+  position: relative;
+  left: -17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 9.9s;
+}
+
+.crown-section > :nth-of-type(6) {
+  position: relative;
+  left:17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 10.1s;
+}
+
+.crown-section > :nth-of-type(7) {
+  position: relative;
+  left:-17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 10.3s;
+}
+
+.crown-section > :nth-of-type(8) {
+  position: relative;
+  left:17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 10.5s;
+}
+
 @keyframes crown-drop {
   0% {
     top: -5em;
@@ -651,19 +652,20 @@ body {
   width: 100vw;
   height: 1200px;
   z-index: 1;
-/*
-  background: linear-gradient(25deg, #aa490d 30%, #eeb51b 70%), url(../images/grunge-clouds-16.jpg);
-  background-blend-mode: soft-light;
-  background-size: cover;
-*/
+}
+
+.stand {
+  position: relative;
+  z-index: 2;
+  margin-left: 5%;
 }
 
 .strongman {
   position: relative;
-  margin-top: 36em;
-  margin-left: 2em;
+  margin-top: 33em;
   z-index: 99;
   width: 400px;
+  margin-left: -20%;
   
 }
 
@@ -714,32 +716,6 @@ body {
 }
 
 
-/*
-
-.shots {
-  transition: transform 1s ease;
-  transform: scale(1);
-  transition-delay: .6s;
-}
-
-.shots.scale {
-  transform: scale(.001);
-}
-
-.may-the {
-  margin-top: -250px;
-  margin-right: -240px;
-}
-
-.be-with {
-  margin-top: 150px;
-  margin-left: -170px;
-}
-*/
-
-
-
-
 
 
 /*
@@ -768,6 +744,7 @@ body {
   /*    background-blend-mode: soft-light;*/
 }
 
+/*
 .rays {
   background-image: url(../images/rays.svg);
   background-size: cover;
@@ -778,13 +755,14 @@ body {
   opacity: .75;
   height: 65em;
 }
+*/
 
 .circle-container {
   position: relative;
   width: 46em;
   height: 46em;
   list-style: none;
-  margin: -67em auto 0;
+  margin: -60em auto 0;
   animation: circle 25s linear infinite;
   z-index: 9;
 }
