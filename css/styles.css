@@ -54,22 +54,6 @@ body {
 
 
 /*
-#field {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #000;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  z-index: -9;
-}
-*/
-
-
-/*
   _______  ____   _____  
  |__   __|/ __ \ |  __ \ 
     | |  | |  | || |__) |
@@ -287,10 +271,10 @@ body {
 }
 
 
+/*Drop Title Bounce Animation*/
 
-
-/* Dropframe Bounce Animations*/
 /*#region*/
+
 @-webkit-keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
@@ -412,6 +396,7 @@ body {
 }
 /*#endregion*/
 
+
 .title {
   position: relative;
   display: flex;
@@ -519,64 +504,12 @@ body {
     top: 57vh;
     opacity: 1;
   }
-
-
   100% {
     right: -35px;
     top: 55vh;
     opacity: 1;
   }
 }
-
-
-/*Newspaper*/
-/*#region*/
-.newspaper {
-    position: absolute;
-    width: 630px;
-    top: 55%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-.news-flip {
-    position: absolute;
-    z-index: 9;
-    animation: rotate-center 0.6s ease-in-out both;
-    animation-delay: 9s;
-    top: 55%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-            opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-            opacity: 1;
-  }
-}
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-      opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-      opacity: 1;
-  }
-}
-/*#endregion*/
 
 
 .arrow {
@@ -638,6 +571,7 @@ body {
   animation-delay: 5s;
 }
 
+
 @keyframes fall {
   0% {
     bottom: 0;
@@ -652,7 +586,6 @@ body {
     opacity: 0;
   }
 }
-
 
 .crown-section {
   position: absolute;
@@ -762,6 +695,18 @@ body {
 }
 
 
+
+/* 
+   _____  _______         _____  
+  / ____||__   __| /\    |  __ \ 
+ | (___     | |   /  \   | |__) |
+  \___ \    | |  / /\ \  |  _  / 
+  ____) |   | | / ____ \ | | \ \ 
+ |_____/    |_|/_/    \_\|_|  \_\
+                                 
+                                 
+*/
+
 .floor-section {
   position: relative;
   width: 100vw;
@@ -789,6 +734,12 @@ body {
   
 }
 
+
+
+
+
+
+
 .floor {
   position: absolute;
   background-image: url(../images/floor.jpg);
@@ -798,42 +749,6 @@ body {
   bottom: 0;
 }
 
-
-
-/* 
-   _____  _______         _____  
-  / ____||__   __| /\    |  __ \ 
- | (___     | |   /  \   | |__) |
-  \___ \    | |  / /\ \  |  _  / 
-  ____) |   | | / ____ \ | | \ \ 
- |_____/    |_|/_/    \_\|_|  \_\
-                                 
-                                 
-*/
-
-
-
-
-
-
-/*
-.video-container {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-*/
-
-
-.star-section-content {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 97vh;
-  width: 70vw;
-  margin: -62% auto 0 auto;
-}
 
 
 
@@ -848,163 +763,6 @@ body {
                                     
                                     
 */
-
-
-/*For some strange reason, the border below fixes the top margin issue */
-.shots-section {
-  border: 1px solid rgb(0, 0, 0);
-  width: 100vw;
-  height: 65em;
-  margin-top: -1px;
-  /*    background: linear-gradient(25deg, #aa490d 30%, #eeb51b 70%), url(../images/grunge-clouds-16.jpg);*/
-  background-image: url("../images/chipboard.jpg");
-  background-position: center;
-  background-repeat: repeat;
-  overflow: hidden;
-  /*    background-blend-mode: soft-light;*/
-}
-
-/*
-.rays {
-  background-image: url(../images/rays.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-  filter: brightness(.2) saturate(5);
-  opacity: .75;
-  height: 65em;
-}
-*/
-
-.circle-container {
-  position: relative;
-  width: 46em;
-  height: 46em;
-  list-style: none;
-  margin: -60em auto 0;
-  animation: circle 25s linear infinite;
-  z-index: 9;
-}
-
-@keyframes circle {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-@keyframes bottle-1 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-360deg);
-  }
-
-}
-
-.circle-container > * {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-
-/* Rotating Crown Bottles */
-/*#region*/
-.circle-container > :nth-of-type(1) {
-  transform: rotate(0deg) translate(18em) rotate(0deg);
-}
-
-.circle-container > :nth-of-type(2) {
-  transform: rotate(22.5deg) translate(18em) rotate(-22.5deg);
-}
-
-.circle-container > :nth-of-type(3) {
-  transform: rotate(45deg) translate(18em) rotate(-45deg);
-}
-
-.circle-container > :nth-of-type(4) {
-  transform: rotate(67.5deg) translate(18em) rotate(-67.5deg);
-}
-
-.circle-container > :nth-of-type(5) {
-  transform: rotate(90deg) translate(18em) rotate(-90deg);
-}
-
-.circle-container > :nth-of-type(6) {
-  transform: rotate(112.5deg) translate(18em) rotate(-112.5deg);
-}
-
-.circle-container > :nth-of-type(7) {
-  transform: rotate(135deg) translate(18em) rotate(-135deg);
-}
-
-.circle-container > :nth-of-type(8) {
-  transform: rotate(157.5deg) translate(18em) rotate(-157.5deg);
-}
-
-.circle-container > :nth-of-type(9) {
-  transform: rotate(180deg) translate(18em) rotate(-180deg);
-}
-
-.circle-container > :nth-of-type(10) {
-  transform: rotate(202.5deg) translate(18em) rotate(-202.5deg);
-}
-
-.circle-container > :nth-of-type(11) {
-  transform: rotate(225deg) translate(18em) rotate(-225deg);
-}
-
-.circle-container > :nth-of-type(12) {
-  transform: rotate(247.50deg) translate(18em) rotate(-247.50deg);
-}
-
-.circle-container > :nth-of-type(13) {
-  transform: rotate(270deg) translate(18em) rotate(-270deg);
-}
-
-.circle-container > :nth-of-type(14) {
-  transform: rotate(292.5deg) translate(18em) rotate(-292.5deg);
-}
-
-.circle-container > :nth-of-type(15) {
-  transform: rotate(315deg) translate(18em) rotate(-315deg);
-}
-
-.circle-container > :nth-of-type(16) {
-  transform: rotate(337.5deg) translate(18em) rotate(-337.5deg);
-}
-
-/*#endregion*/
-
-
-
-
-.circle-container img {
-  display: block;
-  width: 100%;
-  border-radius: 10%;
-  width: 81px;
-}
-
-
-.big-brian {
-  position: absolute;
-  margin-top: -800px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  z-index: 10;
-}
-
 
 
 
@@ -1075,8 +833,9 @@ body {
                                                                                     
 */
 
-/*
 
+
+/*
 @media screen and (max-width: 1100px) {
 
 
@@ -1090,6 +849,9 @@ body {
   }
 
 }
+*/
+
+
 
 @media screen and (max-width: 650px) {
 
@@ -1119,4 +881,4 @@ body {
   
   
   
-}*/
+}
