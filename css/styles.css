@@ -17,16 +17,39 @@ html {
   box-sizing: inherit;
 }
 
-/*Specifying fonts:
-
-font-family: 'Rye', cursive;
-font-family: 'Sancreek', cursive;
-font-family: 'Ewert', cursive;
-
-*/
-
 body {
   overflow-x: hidden;
+  width: 100vw;
+/*
+  background: url(../images/clouds-n.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  animation: bg-clouds 10s infinite;
+*/
+}
+
+.clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  animation: bg-clouds 65s linear infinite;
+}
+
+@keyframes bg-clouds {
+  
+  0% {
+    transform: scale(1);
+  }
+    50% {
+    transform: scale(1.5);
+  }
+    100% {
+    transform: scale(1);
+  }
 }
 
 
@@ -40,8 +63,17 @@ body {
 */
 
 /*#region*/
+
 .top-section {
   height: 100vh;
+}
+
+
+.curtains-container {
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  z-index: 999999999999999999; 
 }
 
 
@@ -51,8 +83,8 @@ body {
   left: 0px;
   width: 100vw;
   max-height: 201px;
-  -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-  filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
+  -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .7));
+  filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .7)) brightness(.7);
   z-index: 999999999999;
 }
 
@@ -61,65 +93,188 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-  filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
+  -webkit-filter: drop-shadow(6px 6px 9px rgb(0, 0, 0, .5));
+  filter: drop-shadow(6px 6px 9px rgb(0, 0, 0, .7)) brightness(.7);
   z-index: 999999;
 }
 
 .right-main-curtain {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   height: 100vh;
-  -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
-  filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .5));
+  -webkit-filter: drop-shadow(6px 6px 17px rgb(0, 0, 0, .5));
+  filter: drop-shadow(6px 6px 17px rgb(0, 0, 0, 2)) brightness(.7);
   z-index: 999999;
 }
 
-
-.brick {
+.ride {
   position: absolute;
-  background-image: url(../images/gradient.png), url(../images/brick-l.jpg);
-  width: 100vw;
-  height: 100vh;
-  background-repeat: repeat;
-  z-index: -2;
+  bottom: 32px;
+  z-index: 999997;
+  animation: ridearound linear 5s forwards;
+}
+
+.head {
+  position: absolute;
+  bottom: 302px;
+  left: 28%;
+  animation: head ease 3s infinite;
+}
+
+.arm {
+  position: absolute;
+  bottom: 300px;
+  left: 49%;
+  animation: wave ease 1s infinite;
+  transform: rotate(-5deg);
+  transform-origin: 0px 100px;
+  z-index: -1;
+
+}
+
+.front-wheel {
+  position: absolute;
+  left: 312px;
+  top: 295px;
+  z-index: -1;
+  animation: spin linear 5s infinite;
+}
+
+.back-wheel {
+  position: absolute;
+  left: 10px;
+  top: 300px;
+  z-index: -1;
+  animation: spin linear 5s infinite;
+}
+
+@keyframes head {
+  0% {
+    right: 100%;
+    opacity: 1;
+  }
+
+  50% {
+    right: 100%;
+    transform: rotate(12deg);
+    opacity: 1;
+  }
+
+  100% {
+    right: -150%;
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0% {
+    right: 100%;
+    opacity: 1;
+  }
+
+  50% {
+    right: 100%;
+    transform: rotate(7deg);
+    opacity: 1;
+  }
+
+  100% {
+    right: -150%;
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
-
-.frame {
+.center-curtains-left {
   position: absolute;
-  top: 16em;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 47vh;
-  width: auto;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 93vh;
   z-index: 99996;
+  filter: brightness(.8);
+  animation: moveleft ease 4s forwards;
+  animation-delay: 4.25s;
 }
 
-#myVideo {
+
+.center-curtains-right {
   position: absolute;
-  top: 16.3em;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 99995;
-  height: 45vh;
-  width: auto;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 93vh;
+  z-index: 99996;
+  filter: brightness(.8);
+  animation: moveright ease 4s forwards;
+  animation-delay: 4.25s;
 }
 
-.dropFrame {
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-animation: bounce-in-top 1.1s both;
-  animation: bounce-in-top 1.1s both;
-  animation-delay: 5s;
+
+@keyframes ridearound {
+  0% {
+    right: 100%;
+    opacity: 1;
+  }
+
+  99.5% {
+    right: -50%;
+    opacity: 1;
+  }
+    100% {
+    opacity: 0;
+    display: none;
+  }
 }
 
-/* Dropframe Bounce Animations*/
+
+@keyframes moveleft {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+
+
+@keyframes moveright {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+   99.5% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+
+/*Drop Title Bounce Animation*/
+
 /*#region*/
+
 @-webkit-keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
@@ -242,169 +397,94 @@ body {
 /*#endregion*/
 
 
-.ride {
+.title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  top: 13.5%;
+  z-index: 999;
+  width: 40vw;
+  max-width: 502px;
+  filter: brightness(.9);
+  z-index: 1;
+  animation: bounce-in-top 1.1s both;
+  animation-delay: 5.5s;
+}
+
+
+.circle-frame-container {
   position: absolute;
-  bottom: 32px;
-  z-index: 999997;
-  animation: ridearound linear 8s forwards;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 19%;
+  width: 30vw;
+  height: 55vh;
+  max-width: 512px;
+  max-height: 43%;
 }
 
-.head {
+.circle-frame {
   position: absolute;
-  bottom: 302px;
-  left: 28%;
-  animation: head ease 3s infinite;
+  margin-top: -30px;
+    -webkit-filter: drop-shadow(2px 4px 10px rgb(0, 0, 0, .8));
+  filter: drop-shadow(2px 4px 10px rgb(0, 0, 0, .8));
+  width: 103%;
+  height: auto;
 }
 
-.arm {
+.circle-back {
   position: absolute;
-  bottom: 300px;
-  left: 49%;
-  animation: wave ease 1s infinite;
-  transform: rotate(-5deg);
-  transform-origin: 0px 100px;
-  z-index: -1;
-
+  width: 89%;
+  height: auto;
 }
 
-.front-wheel {
+.circle-rays {
   position: absolute;
-  left: 312px;
-  top: 295px;
-  z-index: -1;
-  animation: spin linear 5s infinite;
+  animation: swirl 60s linear infinite;
+  width: 89%;
+  height: auto;
+  
 }
 
-.back-wheel {
-  position: absolute;
-  left: 10px;
-  top: 300px;
-  z-index: -1;
-  animation: spin linear 5s infinite;
-}
-
-
-@keyframes head {
-  0% {
-    right: 100%;
-    opacity: 1;
-  }
-
-  50% {
-    right: 100%;
-    transform: rotate(12deg);
-    opacity: 1;
-  }
-
-  100% {
-    right: -150%;
-    opacity: 1;
-  }
-}
-
-
-@keyframes wave {
-  0% {
-    right: 100%;
-    opacity: 1;
-  }
-
-  50% {
-    right: 100%;
-    transform: rotate(7deg);
-    opacity: 1;
-  }
-
-  100% {
-    right: -150%;
-    opacity: 1;
-  }
-}
-
-
-@keyframes spin {
+@keyframes swirl {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
 
-.center-curtains-left {
+.brian-pointing {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50vw;
-  height: 91vh;
-  z-index: 99996;
-  animation: moveleft ease 5s forwards;
-  animation-delay: 4.5s;
+  width: 130%;
+  height: auto;
+  margin-top: -42%;
+  margin-left: -3%;
+  filter: brightness(.83);
+  animation: zoom 1.5s ease forwards;
+  animation-delay: 7s;
+  opacity: 0;
+  z-index: 2;
 }
 
-
-.center-curtains-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50vw;
-  height: 91vh;
-  z-index: 99996;
-  animation: moveright ease 5s forwards;
-  animation-delay: 4.5s;
-}
-
-
-@keyframes ridearound {
+@keyframes zoom {
   0% {
-    right: 100%;
+    transform: scale(.1);
     opacity: 1;
   }
 
   100% {
-    right: -150%;
+    transform: scale(.55);
     opacity: 1;
   }
 }
 
-
-@keyframes moveleft {
-  0% {
-    left: 0;
-    opacity: 1;
-  }
-
-  100% {
-    left: -100%;
-    opacity: 1;
-  }
-}
-
-
-@keyframes moveright {
-  0% {
-    right: 0;
-    opacity: 1;
-  }
-
-  100% {
-    right: -100%;
-    opacity: 1;
-  }
-}
-
-
-.floor {
-  position: absolute;
-  background-image: url(../images/floor.jpg);
-  height: 164px;
-  width: 100%;
-  background-repeat: repeat-x;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
 
 .monkey-1 {
   position: absolute;
@@ -424,8 +504,6 @@ body {
     top: 57vh;
     opacity: 1;
   }
-
-
   100% {
     right: -35px;
     top: 55vh;
@@ -434,80 +512,14 @@ body {
 }
 
 
-.title {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  top: 8em;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-  width: 80vw;
-  max-width: 616px;
-  -webkit-filter: drop-shadow(2px 2px 1px rgb(0, 0, 0, .3));
-  filter: drop-shadow(2px 2px 1px rgb(0, 0, 0, .3));
-  z-index: 9;
-}
-
-/*Newspaper*/
-/*#region*/
-.newspaper {
-    position: absolute;
-    width: 630px;
-    top: 55%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-.news-flip {
-    position: absolute;
-    z-index: 9;
-    animation: rotate-center 0.6s ease-in-out both;
-    animation-delay: 9s;
-    top: 55%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-            opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-            opacity: 1;
-  }
-}
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-      opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-      opacity: 1;
-  }
-}
-/*#endregion*/
-
-
 .arrow {
-  font-family: sans-serif;
-  font-size: 3em;
-  color: #fff;
   position: absolute;
   left: 50%;
-  bottom: 7%;
+  margin-top: 100%;
   z-index: 99999;
   opacity: 0;
+  height: 25%;
+  max-height: 100px;
 }
 
 
@@ -516,7 +528,7 @@ body {
 .blink-1 {
   -webkit-animation: blink-1 0.6s both;
   animation: blink-1 0.6s both;
-  animation-delay: 8s;
+  animation-delay: 10s;
   animation-iteration-count: 2;
 }
 
@@ -524,7 +536,7 @@ body {
 @-webkit-keyframes blink-1 {
   50%,
   100% {
-    opacity: .7;
+    opacity: 1;
   }
   25%,
   75% {
@@ -536,7 +548,7 @@ body {
   0%,
   50%,
   100% {
-    opacity: .7;
+    opacity: 1;
   }
   0%,
   25%,
@@ -548,8 +560,145 @@ body {
 /*#endregion*/
 
 
-/*#endregion*/
+.floor-top {
+  position: absolute;
+  background-image: url(../images/floor.jpg);
+  height: 164px;
+  width: 100vw;
+  background-repeat: repeat-x;
+  bottom: -4.5em;
+  animation: fall 1s ease forwards;
+  animation-delay: 5s;
+}
 
+
+@keyframes fall {
+  0% {
+    bottom: 0;
+  }
+  
+   50% {
+    bottom: -15em;
+  }
+
+  100% {
+    bottom: -16em;
+    opacity: 0;
+  }
+}
+
+/* CROWN BOTTLE FALL SECTION*/
+/*#region*/
+
+.crown-section {
+  position: absolute;
+  width: 100vw;
+  top: -5em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.crown-section > :nth-of-type(1) {
+  position: relative;
+  left: -17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 8s;
+}
+
+.crown-section > :nth-of-type(2) {
+  position: relative;
+  left:17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 8.3s;
+}
+
+.crown-section > :nth-of-type(3) {
+  position: relative;
+  left:-17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 8.5s;
+}
+/*
+
+.crown-section > :nth-of-type(4) {
+  position: relative;
+  left:17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 9.7s;
+}
+
+.crown-section > :nth-of-type(5) {
+  position: relative;
+  left: -17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 9.9s;
+}
+
+.crown-section > :nth-of-type(6) {
+  position: relative;
+  left:17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 10.1s;
+}
+
+.crown-section > :nth-of-type(7) {
+  position: relative;
+  left:-17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 10.3s;
+}
+
+.crown-section > :nth-of-type(8) {
+  position: relative;
+  left:17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 10.5s;
+}
+
+.crown-section > :nth-of-type(9) {
+  position: relative;
+  left: -17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 10.7s;
+}
+
+.crown-section > :nth-of-type(10) {
+  position: relative;
+  left:17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 10.9s;
+}
+
+.crown-section > :nth-of-type(11) {
+  position: relative;
+  left:-17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 11.2s;
+}
+
+.crown-section > :nth-of-type(12) {
+  position: relative;
+  left:17%;
+  animation: crown-drop 3s forwards;
+  animation-delay: 11.4s;
+}
+*/
+
+@keyframes crown-drop {
+  0% {
+    top: -5em;
+  }
+   50% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 114em;
+    opacity: 0;
+  }
+}
+/*#endregion*/
 
 
 /* 
@@ -563,85 +712,183 @@ body {
                                  
 */
 
-
-
-
-
-
-.video-container {
+.floor-section {
   position: relative;
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
+/*  z-index: 1;*/
+  background-image: url(../images/night.jpg);
 }
 
-/*
-.space-1 {
+.stand {
   position: absolute;
-  height: 100vh;
-  width: 100vw;
-  object-fit: fill;
-  filter: grayscale(1);
-  left: 50%;
+  z-index: 2;
+  left: 49.5%;
   transform: translateX(-50%);
+  bottom: 20px;
+  height: 150px;
 }
-*/
 
-
-#field {
-  position: relative;
-  left: 50%;
+.stongman-container {
+  position: absolute;
+  left: 50.5%;
   transform: translateX(-50%);
-  background-color: #000;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  width: 328px;
+  height: 600px;
+  bottom: 140px;
+  z-index: 99;
+}
+
+.strongman {
+  position: absolute;
+  left: 57%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 99;
+}
+
+.strongman-head {
+  position: absolute;
+  top: 145px;
+  left: 110px;
+  transform: translateX(-50%);
+  z-index: 99;
+  animation: headWiggle 2s linear infinite;
+}
+
+@keyframes headWiggle {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+  }
+    50% {
+    transform: rotate(7deg);
+    transform-origin: bottom center;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+  }
+}
+
+.strongman-left {
+  position: absolute;
+  top: 144px;
+  left: -5px;
+  animation: left-arm 4s infinite;
+}
+
+.strongman-right {
+  position: absolute;
+  top: 140px;
+  right: 2px;
+  animation: right-arm 3s infinite;
+}
+
+.juggle-container {
+  position: absolute;
+  text-align: left;
+  width: 300px;
+  height: 300px;
+  bottom: 425px;
+  left: 42vw;
+/*  border: 2px solid yellow;*/
+  animation: circle 3.5s linear infinite;
+}
+
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+     25% {
+    transform: rotate(80deg);
+  }
+  
+  50% {
+    transform: rotate(160deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.crown-juggle-1 {
+/*  width: 25%;*/
+  margin-top: 5em;
+  animation: fixRotation 3.5s linear infinite;
+}
+
+
+@keyframes fixRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+     25% {
+    transform: rotate(-80deg);
+  }
+  
+  50% {
+    transform: rotate(-160deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+@keyframes left-arm {
+  0% {
+    transform: rotate(-15deg) translateX(17px);
+    transform-origin: bottom right;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+  }
+  
+  100% {
+    transform: rotate(-15deg) translateX(17px);
+    transform-origin: bottom right;
+  }
+}
+
+
+@keyframes right-arm {
+  0% {
+    transform: rotate(15deg) translateX(-17px);
+    transform-origin: bottom left;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+  }
+  
+  100% {
+    transform: rotate(15deg) translateX(-17px);
+    transform-origin: bottom left;
+  }
+}
+
+
+
+.floor {
+  position: absolute;
+  background-image: url(../images/floor.jpg);
+  height: 164px;
   width: 100vw;
-  height: 100vh;
-  z-index: -9;
+  background-repeat: repeat-x;
+  bottom: 0;
 }
-
-
-.star-section-content {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 97vh;
-  width: 70vw;
-  margin: -62% auto 0 auto;
-}
-
-.image-holder {
-  transition: transform 1s ease;
-  transform: scale(.7);
-  transition-delay: .5s;
-  z-index: 9;
-}
-
-.image-holder.scale-img {
-  transform: scale(.01);
-}
-
-.shots {
-  transition: transform 1s ease;
-  transform: scale(1);
-  transition-delay: .6s;
-}
-
-.shots.scale {
-  transform: scale(.001);
-}
-
-.may-the {
-  margin-top: -250px;
-  margin-right: -240px;
-}
-
-.be-with {
-  margin-top: 150px;
-  margin-left: -170px;
-}
-
 
 
 
@@ -659,164 +906,8 @@ body {
 */
 
 
-/*For some strange reason, the border below fixes the top margin issue */
-.shots-section {
-  border: 1px solid rgb(0, 0, 0);
-  width: 100vw;
-  height: 65em;
-  margin-top: -1px;
-  /*    background: linear-gradient(25deg, #aa490d 30%, #eeb51b 70%), url(../images/grunge-clouds-16.jpg);*/
-  background-image: url("../images/chipboard.jpg");
-  background-position: center;
-  background-repeat: repeat;
-  overflow: hidden;
-  /*    background-blend-mode: soft-light;*/
-}
 
-.rays {
-  background-image: url(../images/rays.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-  filter: brightness(.2) saturate(5);
-  opacity: .75;
-  height: 65em;
-}
-
-.circle-container {
-  position: relative;
-  width: 46em;
-  height: 46em;
-  list-style: none;
-  margin: -53em auto 0;
-  animation: circle 25s linear infinite;
-  z-index: 9;
-}
-
-@keyframes circle {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-@keyframes bottle-1 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-360deg);
-  }
-
-}
-
-.circle-container > * {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 81px;
-  height: 96px;
-  margin: -3em;
-}
-
-
-/* Rotating Crown Bottles */
-/*#region*/
-.circle-container > :nth-of-type(1) {
-  transform: rotate(0deg) translate(20em) rotate(0deg);
-}
-
-.circle-container > :nth-of-type(2) {
-  transform: rotate(22.5deg) translate(20em) rotate(-22.5deg);
-}
-
-.circle-container > :nth-of-type(3) {
-  transform: rotate(45deg) translate(20em) rotate(-45deg);
-}
-
-.circle-container > :nth-of-type(4) {
-  transform: rotate(67.5deg) translate(20em) rotate(-67.5deg);
-}
-
-.circle-container > :nth-of-type(5) {
-  transform: rotate(90deg) translate(20em) rotate(-90deg);
-}
-
-.circle-container > :nth-of-type(6) {
-  transform: rotate(112.5deg) translate(20em) rotate(-112.5deg);
-}
-
-.circle-container > :nth-of-type(7) {
-  transform: rotate(135deg) translate(20em) rotate(-135deg);
-}
-
-.circle-container > :nth-of-type(8) {
-  transform: rotate(157.5deg) translate(20em) rotate(-157.5deg);
-}
-
-.circle-container > :nth-of-type(9) {
-  transform: rotate(180deg) translate(20em) rotate(-180deg);
-}
-
-.circle-container > :nth-of-type(10) {
-  transform: rotate(202.5deg) translate(20em) rotate(-202.5deg);
-}
-
-.circle-container > :nth-of-type(11) {
-  transform: rotate(225deg) translate(20em) rotate(-225deg);
-}
-
-.circle-container > :nth-of-type(12) {
-  transform: rotate(247.50deg) translate(20em) rotate(-247.50deg);
-}
-
-.circle-container > :nth-of-type(13) {
-  transform: rotate(270deg) translate(20em) rotate(-270deg);
-}
-
-.circle-container > :nth-of-type(14) {
-  transform: rotate(292.5deg) translate(20em) rotate(-292.5deg);
-}
-
-.circle-container > :nth-of-type(15) {
-  transform: rotate(315deg) translate(20em) rotate(-315deg);
-}
-
-.circle-container > :nth-of-type(16) {
-  transform: rotate(337.5deg) translate(20em) rotate(-337.5deg);
-}
-
-/*#endregion*/
-
-
-
-
-.circle-container img {
-  display: block;
-  width: 100%;
-  border-radius: 50%;
-}
-
-
-.big-brian {
-  position: absolute;
-  margin-top: -800px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  z-index: 10;
-}
-
-
-
-
+/*
 .shots-words-container {
   position: relative;
   margin: -650px auto 0 auto;
@@ -867,6 +958,7 @@ body {
   margin: 400px 0 0 71vw;
   animation-delay: 2.6s;
 }
+*/
 
 
 
@@ -883,6 +975,8 @@ body {
 */
 
 
+
+/*
 @media screen and (max-width: 1100px) {
 
 
@@ -895,10 +989,10 @@ body {
     height: 85vh;
   }
 
-  .big-brian {
-  margin-top: -82%;
 }
-}
+*/
+
+
 
 @media screen and (max-width: 650px) {
 
@@ -921,85 +1015,7 @@ body {
     display: none;
   }
 
-  .dropFrame {
-    margin-top: -50px;
-  }
   
-  .ride {
-    bottom: 0px;
-    animation: ridearound linear 3s forwards;
-  }
-  
-  .center-curtains-right, .center-curtains-left {
-  animation-delay: 2.5s;
-}
-  
-  .blink-1 {
-  animation-delay: 7s;
-}
-  
-  .image-holder {
-    width: 50%;
-    margin-left: 59%;
-    margin-top: -230px;
-/*    margin-left: 55%;*/
-  }
-  
- .may-the {
-  margin-top: -650px;
-  margin-right: -700px;
-  margin-left: -50px;
-  width: 200px;
-}
-
-.be-with {
-  margin-top: 150px;
-  margin-left: -390px;
- width: 150px;
-}
-  
- .star-section-content {
-  display: flex;
-  flex-wrap: wrap;
-  height: 610px;
-  width: 400px;
-  top: 62%;
-  margin-top: -305px;
-  left: 50%;
-  margin-left: -180px;
-} 
- 
-  .rays {
-    margin-top: -30%;
-  }
-  
-  
-  .shots-section {
-  height: 47em;
-}
-  
-  
-  .big-brian {
-  margin-top: -140%;
-  width: 350px;
-  z-index: 10;
-}
-  
-  .circle-container {
-  display: none;
-}
-  
-
-  .shots-text-2, .shots-text-3, .shots-text-4, .shots-text-5 {display: none;}
-
-  
-  .shots-text-1-m {
-  font-size: 5em;
-  margin: -180px auto 0 auto;
-  width: 100vw;
-  transform: rotate(-20deg) !important;
-  animation-delay: .7s;
-  }
   
   
   
