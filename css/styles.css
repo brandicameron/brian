@@ -417,9 +417,9 @@ body {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  top: -52em;
+  top: 15%;
   z-index: 999;
-  width: 80vw;
+  width: 40vw;
   max-width: 502px;
   filter: brightness(.9);
   z-index: 1;
@@ -434,7 +434,7 @@ body {
   justify-content: center;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 20em;
+  margin-top: 18%;
   width: 30vw;
   height: 55vh;
   max-width: 512px;
@@ -476,9 +476,11 @@ body {
 
 
 .brian-pointing {
-  position: relative;
-  margin-top: 7em;
-  margin-left: -3em;
+  position: absolute;
+  width: 130%;
+  height: auto;
+  margin-top: -42%;
+  margin-left: -3%;
   filter: brightness(.83);
   animation: zoom 1.5s ease forwards;
   animation-delay: 7s;
@@ -578,14 +580,13 @@ body {
 
 
 .arrow {
-  font-family: sans-serif;
-  font-size: 3em;
-  color: #fff;
   position: absolute;
   left: 50%;
-  bottom: 3%;
+  margin-top: 103%;
   z-index: 99999;
   opacity: 0;
+  height: 20%;
+  max-height: 100px;
 }
 
 
@@ -634,7 +635,7 @@ body {
   background-repeat: repeat-x;
   bottom: -4.5em;
   animation: fall 1s ease forwards;
-  animation-delay: 4.5s;
+  animation-delay: 5s;
 }
 
 @keyframes fall {
