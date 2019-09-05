@@ -33,10 +33,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: auto;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
-  filter: sepia(.4);
   animation: bg-clouds 65s linear infinite;
 }
 
@@ -80,6 +79,10 @@ body {
 */
 
 /*#region*/
+
+.top-section {
+  height: 100vh;
+}
 
 
 .curtains-container {
@@ -213,7 +216,7 @@ body {
   top: 0;
   left: 0;
   width: 50vw;
-  height: 91vh;
+  height: 93vh;
   z-index: 99996;
   filter: brightness(.8);
   animation: moveleft ease 4s forwards;
@@ -226,7 +229,7 @@ body {
   top: 0;
   right: 0;
   width: 50vw;
-  height: 91vh;
+  height: 93vh;
   z-index: 99996;
   filter: brightness(.8);
   animation: moveright ease 4s forwards;
@@ -431,20 +434,33 @@ body {
   justify-content: center;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 23em;
-  
+  margin-top: 20em;
+  width: 30vw;
+  height: 55vh;
+  max-width: 512px;
+  max-height: 43%;
 }
 
+.circle-frame {
+  position: absolute;
+  margin-top: -30px;
+    -webkit-filter: drop-shadow(2px 4px 10px rgb(0, 0, 0, .8));
+  filter: drop-shadow(2px 4px 10px rgb(0, 0, 0, .8));
+  width: 103%;
+  height: auto;
+}
 
 .circle-back {
-  top: -30px;
   position: absolute;
+  width: 89%;
+  height: auto;
 }
 
 .circle-rays {
-  top: -30px;
   position: absolute;
   animation: swirl 60s linear infinite;
+  width: 89%;
+  height: auto;
   
 }
 
@@ -456,14 +472,6 @@ body {
   100% {
     transform: rotate(360deg);
   }
-}
-
-
-.circle-frame {
-  position: absolute;
-  margin-top: -80px;
-    -webkit-filter: drop-shadow(2px 4px 10px rgb(0, 0, 0, .8));
-  filter: drop-shadow(2px 4px 10px rgb(0, 0, 0, .8));
 }
 
 
