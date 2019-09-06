@@ -67,6 +67,10 @@ body {
 
 .top-section {
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
@@ -86,7 +90,7 @@ body {
   max-height: 201px;
   -webkit-filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .7));
   filter: drop-shadow(6px 6px 7px rgb(0, 0, 0, .7)) brightness(.7);
-  z-index: 999999999999;
+  z-index: 999999999999999999999999;
 }
 
 .left-main-curtain {
@@ -403,7 +407,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  top: 13.5%;
+  top: 15%;
   z-index: 999;
   width: 40vw;
   max-width: 502px;
@@ -420,7 +424,7 @@ body {
   justify-content: center;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 21%;
+  top: 35vh;
   width: 30vw;
   height: 55vh;
   max-width: 512px;
@@ -487,6 +491,7 @@ body {
 }
 
 
+/*
 .monkey-1 {
   position: absolute;
   left: -30px;
@@ -511,6 +516,7 @@ body {
     opacity: 1;
   }
 }
+*/
 
 
 .arrow {
@@ -650,11 +656,12 @@ body {
 }
 /*#endregion*/
 
-.floor-section {
+.strong-section {
   position: relative;
+  margin-top: 100vh;
   width: 100vw;
   height: 100vh;
-/*  z-index: 1;*/
+  z-index: 99999;
   background-image: url(../images/night.jpg);
 }
 
