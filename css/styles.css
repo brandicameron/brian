@@ -37,6 +37,7 @@ body {
   height: 100vh;
   overflow: hidden;
   animation: bg-clouds 65s linear infinite;
+  z-index: -9999999;
 }
 
 @keyframes bg-clouds {
@@ -419,7 +420,7 @@ body {
   justify-content: center;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 19%;
+  margin-top: 21%;
   width: 30vw;
   height: 55vh;
   max-width: 512px;
@@ -528,7 +529,7 @@ body {
 .blink-1 {
   -webkit-animation: blink-1 0.6s both;
   animation: blink-1 0.6s both;
-  animation-delay: 10s;
+  animation-delay: 9.5s;
   animation-iteration-count: 2;
 }
 
@@ -559,6 +560,19 @@ body {
 
 /*#endregion*/
 
+
+
+
+/*
+   _____ _______ _____   ____  _   _  _____ 
+  / ____|__   __|  __ \ / __ \| \ | |/ ____|
+ | (___    | |  | |__) | |  | |  \| | |  __ 
+  \___ \   | |  |  _  /| |  | | . ` | | |_ |
+  ____) |  | |  | | \ \| |__| | |\  | |__| |
+ |_____/   |_|  |_|  \_\\____/|_| \_|\_____|
+                                            
+                                            
+*/
 
 .floor-top {
   position: absolute;
@@ -619,71 +633,7 @@ body {
   animation: crown-drop 3s forwards;
   animation-delay: 8.5s;
 }
-/*
 
-.crown-section > :nth-of-type(4) {
-  position: relative;
-  left:17%;
-  animation: crown-drop 3s forwards;
-  animation-delay: 9.7s;
-}
-
-.crown-section > :nth-of-type(5) {
-  position: relative;
-  left: -17%;
-  animation: crown-drop 3s forwards;
-  animation-delay: 9.9s;
-}
-
-.crown-section > :nth-of-type(6) {
-  position: relative;
-  left:17%;
-  animation: crown-drop 3s forwards;
-  animation-delay: 10.1s;
-}
-
-.crown-section > :nth-of-type(7) {
-  position: relative;
-  left:-17%;
-  animation: crown-drop 3s forwards;
-  animation-delay: 10.3s;
-}
-
-.crown-section > :nth-of-type(8) {
-  position: relative;
-  left:17%;
-  animation: crown-drop 3s forwards;
-  animation-delay: 10.5s;
-}
-
-.crown-section > :nth-of-type(9) {
-  position: relative;
-  left: -17%;
-  animation: crown-drop 3s forwards;
-  animation-delay: 10.7s;
-}
-
-.crown-section > :nth-of-type(10) {
-  position: relative;
-  left:17%;
-  animation: crown-drop 3s forwards;
-  animation-delay: 10.9s;
-}
-
-.crown-section > :nth-of-type(11) {
-  position: relative;
-  left:-17%;
-  animation: crown-drop 3s forwards;
-  animation-delay: 11.2s;
-}
-
-.crown-section > :nth-of-type(12) {
-  position: relative;
-  left:17%;
-  animation: crown-drop 3s forwards;
-  animation-delay: 11.4s;
-}
-*/
 
 @keyframes crown-drop {
   0% {
@@ -699,18 +649,6 @@ body {
   }
 }
 /*#endregion*/
-
-
-/* 
-   _____  _______         _____  
-  / ____||__   __| /\    |  __ \ 
- | (___     | |   /  \   | |__) |
-  \___ \    | |  / /\ \  |  _  / 
-  ____) |   | | / ____ \ | | \ \ 
- |_____/    |_|/_/    \_\|_|  \_\
-                                 
-                                 
-*/
 
 .floor-section {
   position: relative;
@@ -729,7 +667,7 @@ body {
   height: 150px;
 }
 
-.stongman-container {
+.strongman-container {
   position: absolute;
   left: 50.5%;
   transform: translateX(-50%);
@@ -891,74 +829,73 @@ body {
 }
 
 
-
-
-
 /*
-   _____ _    _  ____ _______ _____ 
-  / ____| |  | |/ __ \__   __/ ____|
- | (___ | |__| | |  | | | | | (___  
-  \___ \|  __  | |  | | | |  \___ \ 
-  ____) | |  | | |__| | | |  ____) |
- |_____/|_|  |_|\____/  |_| |_____/ 
-                                    
-                                    
+  ______ _____  ______          _  __
+ |  ____|  __ \|  ____|   /\   | |/ /
+ | |__  | |__) | |__     /  \  | ' / 
+ |  __| |  _  /|  __|   / /\ \ |  <  
+ | |    | | \ \| |____ / ____ \| . \ 
+ |_|    |_|  \_\______/_/    \_\_|\_\
+                                     
+                                     
 */
 
 
 
-/*
-.shots-words-container {
-  position: relative;
-  margin: -650px auto 0 auto;
-}
 
-.shots-text {
-  position: absolute;
-  font-family: 'Sancreek', sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #a84919;
-  color: #212121;
-  font-size: 4em;
+.neon {
+  font-size: calc(20px + 11vh);
+  line-height: calc(20px + 20vh);
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Rye", cursive;
   text-align: center;
-  -webkit-filter: drop-shadow(2px 2px 0px rgb(255, 255, 255));
-  filter: drop-shadow(2px 2px 0px rgb(255, 255, 255));
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
 }
 
 
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
 
-.shots-text-1 {
-  transform: rotate(-30deg) !important;
-  margin: -80px 0 0 23vw;
-  animation-delay: .7s;
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
 }
 
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
 
-.shots-text-2 {
-  transform: rotate(15deg) !important;
-  margin: 250px 0 0 8vw;
-  animation-delay: 1.7s;
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
 }
-
-.shots-text-3 {
-  transform: rotate(30deg) !important;
-  margin: -140px 0 0 56vw;
-  animation-delay: 2s;
-}
-
-.shots-text-4 {
-  transform: rotate(-35deg) !important;
-  margin: 100px 0 0 76vw;
-  animation-delay: 2.5s;
-}
-
-.shots-text-5 {
-  transform: rotate(-20deg) !important;
-  margin: 400px 0 0 71vw;
-  animation-delay: 2.6s;
-}
-*/
 
 
 
