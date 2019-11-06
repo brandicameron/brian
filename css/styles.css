@@ -28,7 +28,6 @@ body {
   animation: bg-clouds 10s infinite;
 */
 }
-
 .clouds {
   position: fixed;
   top: 0;
@@ -490,35 +489,6 @@ body {
     opacity: 1;
   }
 }
-
-
-/*
-.monkey-1 {
-  position: absolute;
-  left: -30px;
-  top: 55vh;
-  opacity: 0;
-  transform: rotate(35deg);
-  animation: curtainmonkey ease 2s forwards;
-  animation-delay: 6.5s;
-  z-index: 99994;
-}
-
-
-@keyframes curtainmonkey {
-  0% {
-    left: -100px;
-    top: 57vh;
-    opacity: 1;
-  }
-  100% {
-    right: -35px;
-    top: 55vh;
-    opacity: 1;
-  }
-}
-*/
-
 
 .arrow {
   position: absolute;
