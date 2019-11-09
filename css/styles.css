@@ -20,13 +20,6 @@ html {
 body {
   overflow-x: hidden;
   width: 100vw;
-/*
-  background: url(../images/clouds-n.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  animation: bg-clouds 10s infinite;
-*/
 }
 .clouds {
   position: fixed;
@@ -51,7 +44,6 @@ body {
     transform: scale(1);
   }
 }
-
 
 /*
   _______  ____   _____  
@@ -117,6 +109,22 @@ body {
   bottom: 32px;
   z-index: 999997;
   animation: ridearound linear 5s forwards;
+}
+
+@keyframes ridearound {
+  0% {
+    right: 100%;
+    opacity: 1;
+  }
+
+  99.5% {
+    right: -50%;
+    opacity: 1;
+  }
+    100% {
+    opacity: 0;
+    display: none;
+  }
 }
 
 .head {
@@ -222,23 +230,6 @@ body {
   filter: brightness(.8);
   animation: moveright ease 4s forwards;
   animation-delay: 4.25s;
-}
-
-
-@keyframes ridearound {
-  0% {
-    right: 100%;
-    opacity: 1;
-  }
-
-  99.5% {
-    right: -50%;
-    opacity: 1;
-  }
-    100% {
-    opacity: 0;
-    display: none;
-  }
 }
 
 
@@ -681,74 +672,6 @@ body {
 }
 
 
-/*
-  ______ _____  ______          _  __
- |  ____|  __ \|  ____|   /\   | |/ /
- | |__  | |__) | |__     /  \  | ' / 
- |  __| |  _  /|  __|   / /\ \ |  <  
- | |    | | \ \| |____ / ____ \| . \ 
- |_|    |_|  \_\______/_/    \_\_|\_\
-                                     
-                                     
-*/
-
-
-
-
-.neon {
-  font-size: calc(20px + 11vh);
-  line-height: calc(20px + 20vh);
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-  color: #fff6a9;
-  font-family: "Rye", cursive;
-  text-align: center;
-  animation: blink 12s infinite;
-  -webkit-animation: blink 12s infinite;
-}
-
-
-@-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
-  }
-}
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
-  }
-}
-
 
 
 
@@ -765,25 +688,7 @@ body {
 
 
 
-/*
-@media screen and (max-width: 1100px) {
-
-
-  .center-curtains-left {
-    height: 85vh;
-  }
-
-
-  .center-curtains-right {
-    height: 85vh;
-  }
-
-}
-*/
-
-
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1050px) {
 
 
   .frame-curtain {
@@ -792,7 +697,7 @@ body {
   }
 
   .left-main-curtain {
-    left: -200px;
+    left: -210px;
   }
 
   .right-main-curtain {
@@ -803,12 +708,73 @@ body {
   .monkey-1 {
     display: none;
   }
+  
+  .ride {
+  position: absolute;
+  bottom: 32px;
+  z-index: 999997;
+  animation: ridearound linear 3s forwards;
+}
+  
+  .clouds {
+    width: auto;
+    height: 100vh;
+    animation: bg-clouds 65s linear infinite;
+  }
+  
+  .title {
+    width: 60vw;
+    top: 8vh;
+    z-index: -1;
+  }
+  
+  .circle-frame-container {
+    top: 27vh;
+  }
+  
+  .circle-frame {
+    height: 360px;
+  }
+  
+  .circle-rays, .circle-back {
+    height: 300px;
+  }
 
+  .brian-pointing {
+    height: 730px;
+    margin-top: -220px;
+  }
   
-  
+  .arrow {
+    bottom: -15vh;
+  }
   
   
   
   
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
