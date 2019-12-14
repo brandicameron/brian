@@ -37,7 +37,7 @@
 
 <body>
 
-  <audio id="background-audio" class="audio1">
+  <audio autoplay id="background-audio" class="audio1">
     <source src="images/circus.mp3" type="audio/mpeg">
     <source src="images/circus.ogg" type="audio/ogg">
   </audio>
@@ -78,7 +78,7 @@
   <img class="center-curtains-left" src="images/center-curtain.png" alt="Theatre Curtains Opening">
 
   <img class="center-curtains-right" src="images/center-curtain.png" alt="Theatre Curtains Opening">
-  
+
 
   <div class="top-section">
 
@@ -122,17 +122,48 @@
 
 
   <div class="strong-section">
+    <div class="strong-bottom-fix">
 
-    <img class="stand" src="images/stand.png" alt="A stand for Brian to stand on lol.">
+      <div class="scroll-section-container">
 
+
+        
+<!--              <img class="stand" src="images/stand.png" alt="A stand for Brian to stand on lol.">-->
+
+          <!--
     <img class="crown-to-hold-1" src="images/crown.png" alt="Bottle of Crown Royal.">
     <img class="crown-to-hold-2" src="images/crown.png" alt="Bottle of Crown Royal.">
+-->
+        
+        
+        
+        <div class="scroll-section strong-container">
+          <img class="strong-head" src="images/head-stm.png" alt="Brian as a strongman.">
 
-    <img class="strongman" src="images/strongman.png" alt="Brian as a strongman.">
+          <img class="strongman" src="images/strong-man.png" alt="Brian as a strongman.">
+        </div>
 
 
-    <div class="floor"></div>
+        
+        
+        <div class="scroll-section">
+          <img class="shot-brian" src="images/brian-with-big-shot.png" alt="Brian as a strongman.">
+        </div>
 
+        <div class="scroll-section">
+          <img class="shot-brian-2" src="images/brian-with-big-shot.png" alt="Brian as a strongman.">
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="floor"></div>
+
+
+    </div>
   </div>
 
 
@@ -262,6 +293,8 @@
     // Original timing of the screensaver
     setInterval(draw, 40);
   </script>
+ 
+  
   <script>
     $(window).scroll(function() {
       var scroll = $(window).scrollTop();
@@ -272,6 +305,8 @@
       }
     })
   </script>
+  
+  
   <script>
     $(window).scroll(function() {
       var scroll = $(window).scrollTop();
