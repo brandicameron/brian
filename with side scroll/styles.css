@@ -49,10 +49,15 @@ body {
 }
 
 /*
-    
-************* TOP SECTION *************                                
+  _______  ____   _____  
+ |__   __|/ __ \ |  __ \ 
+    | |  | |  | || |__) |
+    | |  | |  | ||  ___/ 
+    | |  | |__| || |     
+    |_|   \____/ |_|     
 */
 
+/*#region*/
 
 .top-section {
   height: 100vh;
@@ -535,6 +540,18 @@ body {
 
 
 
+
+/*
+   _____ _______ _____   ____  _   _  _____ 
+  / ____|__   __|  __ \ / __ \| \ | |/ ____|
+ | (___    | |  | |__) | |  | |  \| | |  __ 
+  \___ \   | |  |  _  /| |  | | . ` | | |_ |
+  ____) |  | |  | | \ \| |__| | |\  | |__| |
+ |_____/   |_|  |_|  \_\\____/|_| \_|\_____|
+                                            
+                                            
+*/
+
 .floor-top {
   position: absolute;
   background-image: url(../images/floor.jpg);
@@ -615,18 +632,122 @@ body {
 
 
 
-
-.section-two {
+.strong-section {
   position: relative;
+  flex-direction: column;
   margin-top: 100vh;
   height: 100vh;
   z-index: 99999;
   background-image: url(../images/night.jpg);
 }
 
-.lights {
-  margin-top: 85px;
-  width: 100vw;
+.strong-bottom-fix {
+  /*  border: 2px solid yellow;*/
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.stand {
+  position: absolute;
+  z-index: 2;
+  left: 105.5%;
+  transform: translateX(-50%);
+  bottom: 2vh;
+  height: 15vh;
+}
+
+
+.crown-to-hold-1 {
+  position: absolute;
+  bottom: 69vh;
+  left: 40.5vw;
+}
+
+.crown-to-hold-2 {
+  position: absolute;
+  bottom: 70.5vh;
+  left: 56.2vw;
+}
+
+
+.scroll-section-container {
+  position: absolute;
+  transform: rotate(-90deg);
+  overflow-x: hidden;
+  flex: 0;
+  width: 800px;
+/*  border: 1px solid yellow;*/
+  left: 30vw;
+  bottom: -60%;
+
+}
+
+.scroll-section {
+  position: relative;
+  transform: rotate(90deg);
+}
+
+.scroll-section-container::-webkit-scrollbar {
+  display: none;
+  overflow: -moz-scrollbars-none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.strong-container {
+  position: relative;
+/*  margin-top: -8vw;*/
+  bottom: 13vh;
+}
+
+.strong-head {
+  position: relative;
+  z-index: 10;
+  margin-left: 930px;
+  top: 290px;
+  animation: bobble 3s ease infinite;
+}
+
+@keyframes bobble {
+  0% {
+    transform: rotate(-5deg);
+  }
+  
+   50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+
+.strongman {
+  position: relative;
+  z-index: 9;
+  margin-left: 625px;
+  top: -50px;
+}
+
+.shot-brian {
+  position: relative;
+  height: 60vh;
+  margin-left: 40em;
+  z-index: 9;
+}
+
+.shot-brian-2 {
+  position: relative;
+  height: 60vh;
+  margin-left: 40em;
+  padding-right: 60em;
+  z-index: 9;
+/*  border: 2px solid yellow;*/
 }
 
 
@@ -644,14 +765,15 @@ body {
 
 
 
-
-
-
-
-
 /*
-    
-************* MEDIA *************                                
+  __  __  ______  _____  _____           
+ |  \/  ||  ____||  __ \|_   _|    /\    
+ | \  / || |__   | |  | | | |     /  \   
+ | |\/| ||  __|  | |  | | | |    / /\ \  
+ | |  | || |____ | |__| |_| |_  / ____ \ 
+ |_|  |_||______||_____/|_____|/_/    \_\
+                                         
+                                                                                    
 */
 
 
